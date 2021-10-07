@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+<div class="container-fluid px-0">
+    <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2071&q=100" class="d-block w-100 mx-0" style="opacity:0.4; height:700px;" />
+    <h1 style="position:absolute; top:150px; left:500px; color:darkCyan">Contact us:</h1>
+</div>
+<div class="container" style="position:absolute; left:55px; top:250px">
+    <form method="POST" action="/contact/">
+    {% csrf_token %}
+        <div class="mb-3">
+            <label for="name" style="font-weight: bold" class="form-label">Name</label>
+            <input type="text" class="form-control" id="text" name="name" placeholder="Enter your Name">
+        </div>
+        <div class="mb-3">
+            <label for="email" style="font-weight: bold" class="form-label">Email Address</label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="Enter your Email">
+        </div>
+        <div class="mb-3">
+            <label for="phone" style="font-weight: bold" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your Phone Number">
+        </div>
+        <div class="mb-3">
+            <label for="desc" style="font-weight: bold" class="form-label">Feedback</label>
+            <textarea type="text" class="form-control" id="text" name="desc" placeholder="Any Query/Complain/Suggestions..." rows="3" ></textarea>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-primary me-md-2" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+{% endblock body %}

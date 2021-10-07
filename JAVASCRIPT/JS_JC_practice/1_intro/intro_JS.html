@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to JS</title>
+    <style>
+        /* CSS styles  */
+        body {
+            background-color: rgb(193, 243, 187);
+            font-size: 20px;
+        }
+        button {
+            background-color: rgb(112, 4, 13);
+            color: white;
+            padding: 5px;
+        }
+        #demo{
+            font-weight: bolder;
+        }
+        .bulb{
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .styles{
+            padding: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .elements{
+            padding: 5px;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <!-- change HTML content using 'innerHTML' -->
+        <p id="demo">I am Jayesh</p>
+        <button onclick="document.getElementById('demo').innerHTML = 'Hello World!'""> Change</button>
+        <button onclick="document.getElementById('demo').innerHTML = 'I am Jayesh'""> Unchange</button>
+    </div>
+
+    <div class="bulb">
+        <!-- chnage HTML attribute values using 'src'  -->
+        <button onclick="document.getElementById('image').src= 'pic_bulbon.gif'">To turn ON </button>
+        <img id="image" src="pic_bulboff.gif" style="width: 100px">
+        <button onclick="document.getElementById('image').src= 'pic_bulboff.gif'">To turn OFF </button>
+    </div>
+
+    <div class="styles">
+        <!-- change HTML(CSS) styles using 'style'  -->
+        <button style="margin: 10px" onclick="document.getElementById('data').style.fontSize= '25px'">Change font size </button>
+        <p id="data">I can Change my Font Size</p>
+        <button style="margin: 10px" onclick="document.getElementById('data').style.fontSize= '20px'">Unchange font size </button>
+    </div>
+    
+    <div class="elements">
+        <!-- hide/unhide HTML elements using 'style.display'  -->
+        <button style="margin: 10px" onclick="document.getElementById('elem').style.display= 'none'">Disappear</button>
+        <p id="elem">This text can Disappear</p>
+        <button style="margin: 10px" onclick="document.getElementById('elem').style.display= 'block'">Appear</button>
+    </div>
+
+</body>
+
+</html>

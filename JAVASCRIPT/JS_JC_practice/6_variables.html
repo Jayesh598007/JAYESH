@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <!-- Variables are containers for storing data (values)  -->
+    
+</head>
+<body>
+    <div class ="variables">
+        <p>
+           The general rules for constructing names for variables are:
+           @ Names can contain letters, digits, underscores, and dollar signs.
+           @ Names must begin with a letter
+           @ Names can also begin with $ and _ (but we will not use it in this tutorial)
+           @ Names are case sensitive (y and Y are different variables)
+           @ Reserved words (like JavaScript keywords) cannot be used as names
+        </p>
+    </div>
+
+    <div class="arithmatic">
+        <p id="demo"></p>
+        <!-- number will be added  -->
+        <!-- strings will be concatenated -->
+        <script>
+            var x = 5 + 2 + 3;
+            var y = "5" + 2 + 3;
+            var z = 2 + 3 + "5";
+            document.getElementById('demo').innerHTML ="The values of x is " + x + ", The values of y is " + y + ", The values of z is " + z; 
+        </script>
+    </div>
+
+    <div class="redeclare">
+        <p>variables can be reclared as below</p>
+        <script>
+            var x = "john";
+            var x = 6857;
+            console.log(x);      // x = 6857 
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div class="Example">
+        <!-- Variables containing many values is known as objects   -->
+        <p>
+            a car is an 'object'
+            <script>
+                // car has 'properties' like color,weight,etc
+                car.name = "Volvo";
+                car.model = "sv2019";
+                car.weight = "500Kg";
+                car.color = "red";
+            </script>
+            <script>
+                // car also has 'methods' like start, stop, rake, etc
+                car.start();
+                car.drive();
+                car.stop();
+                car.brake();
+            </script>
+
+            all car have same 'properties', but the property "values" differ from car to car
+            all car have same 'methods', but the methods are performed at diff times
+        </p>
+    </div>
+
+    <div class="objects">\
+        <p>
+            @ Objects are variables too. But objects can contain many values
+            @ The values are written as "name:value" pairs
+            <script>
+                // objects are generally declared as 'const'
+                const car = { Name: "Nexon", year: 2019, color: "white"}; 
+
+                // An object definition can span multiple lines
+                const person = {
+                    firstName: "Jayesh",
+                    lastName: "chaudhari",
+                    age: 23,
+                    eyeColor: "black",
+                };
+            </script>
+        </p>
+    </div>
+
+    <div class="properties">
+        <p>
+            The 'name:values' pairs in objects are called properties
+            <script>
+                // firstName,lastName,age, eyeColor   >>>   properties
+                // Jayesh, Chaudhari, 23, black       >>>   property values 
+
+                // accessing the object property name 
+                console.log(person.firstName);          // Jayesh
+                console.log(person["lastName"]);        // chaudhari
+            </script>
+        </p>
+    </div>
+
+    <div class="methods">
+        <p>
+            Methods are actions that can be performed on objects 
+            <script>
+                const school= {
+                    pen: "pinpoint",
+                    pencil: "apsara", 
+                    eraser: "camlin",
+                    stationary: function(){
+                        return this.pen + " " + this.pencil + " " + this.eraser;
+                    }                // 'this.firstName' means the 'firstName' property of this object
+                };
+
+                // accessing the object methods
+                console.log(school.stationary());       // pinpoint apsara camlin
+                console.log(school.stationary);         // returns all function     
+            </script>
+        </p>
+    </div>
+
+    <div>
+        <p>When a JS variable is declared with the 'new' keyword , the variables is created as an object
+            <script>
+                const x = new Place();           // declares x as place object
+                const y = new college();         // declares x as college object
+            </script>
+        </p>
+    </div>
+
+</body>
+
+</html>

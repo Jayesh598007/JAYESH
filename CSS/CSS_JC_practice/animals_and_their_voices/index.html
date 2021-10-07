@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sounds</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(salmon, coral, crimson, purple);
+        }
+        
+        .box {
+            height: 230px;
+            width: 230px;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: blanchedalmond;
+        }
+
+        p {
+            font-size: 20px;
+            color: lightcyan;
+            font-weight: bold;
+        }
+
+        .main {
+            height: 100vh;
+            width: 100vw;
+            padding: 0px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        img {
+            height: 230px;
+            width: 230px;
+            padding: 0 10px;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <h1>Here is the list of animals</h1>
+            <p>Click on the image to hear animal's sound</p>
+        </div>
+        <img src="images/lion_i.jpg" id="lion">
+        <img src="images/bee_i.jpg" id="bee">
+        <img src="images/cat_i.jpg" id="cat">
+        <img src="images/tiger_i.jpg" id="tiger">
+        <img src="images/crow_i.jpg" id="crow">
+        <img src="images/leopard_i.jpg" id="leopard">
+        <img src="images/horse_i.jpg" id="horse">
+        <img src="images/cow_i.jpg" id="cow">
+        <img src="images/wolf_i.jpg" id="wolf">
+        <img src="images/hen_i.jpg" id="hen">
+        <img src="images/gorilla_i.jpg" id="gorilla">
+        <img src="images/elephant_i.jpg" id="elephant">
+        <img src="images/goat_i.jpg" id="goat">
+        <img src="images/sheep_i.jpg" id="sheep">
+    </div>
+
+    <audio id="lion1" src="voices/lion_v.mp3" type="audio/mp3"></audio>
+    <audio id="bee1" src="voices/bee_v.mp3" type="audio/mp3"></audio>
+    <audio id="cat1" src="voices/cat_v.mp3" type="audio/mp3"></audio>
+    <audio id="tiger1" src="voices/tiger_v.mp3" type="audio/mp3"></audio>
+    <audio id="crow1" src="voices/crow_v.mp3" type="audio/mp3"></audio>
+    <audio id="leopard1" src="voices/leopard_v.mp3" type="audio/mp3"></audio>
+    <audio id="horse1" src="voices/horse_v.mp3" type="audio/mp3"></audio>
+    <audio id="cow1" src="voices/cow_v.mp3" type="audio/mp3"></audio>
+    <audio id="wolf1" src="voices/wolf_v.mp3" type="audio/mp3"></audio>
+    <audio id="hen1" src="voices/hen_v.mp3" type="audio/mp3"></audio>
+    <audio id="gorilla1" src="voices/gorilla_v.mp3" type="audio/mp3"></audio>
+    <audio id="goat1" src="voices/goat_v.mp3" type="audio/mp3"></audio>
+    <audio id="sheep1" src="voices/sheep_v.mp3" type="audio/mp3"></audio>
+    <audio id="elephant1" src="voices/elephant_v.mp3" type="audio/mp3"></audio>
+
+    <script>
+        var lion1 = document.getElementById("lion1");
+        var lion = document.getElementById("lion");      
+        lion.onclick = function () {
+            lion1.play();
+        }
+
+        var leopard1 = document.getElementById("leopard1");
+        var leopard = document.getElementById("leopard");       
+        leopard.onclick = function () {
+            leopard1.play();
+        }
+
+        var cat1 = document.getElementById("cat1");
+        var cat = document.getElementById("cat");      
+        cat.onclick = function () {
+            cat1.play();
+        }
+
+        var crow1 = document.getElementById("crow1");
+        var crow = document.getElementById("crow");    
+        crow.onclick = function () {
+            crow1.play();
+        }
+
+        var horse1 = document.getElementById("horse1");
+        var horse = document.getElementById("horse");      
+        horse.onclick = function () {
+            horse1.play();
+        }
+
+        var sheep1 = document.getElementById("sheep1");
+        var sheep = document.getElementById("sheep");      
+        sheep.onclick = function () {
+            sheep1.play();
+        }
+
+        var goat1 = document.getElementById("goat1");
+        var goat = document.getElementById("goat");      
+        goat.onclick = function () {
+            goat1.play();
+        }
+
+        var cow1 = document.getElementById("cow1");
+        var cow = document.getElementById("cow");       
+        cow.onclick = function () {
+            cow1.play();
+        }
+
+        var elephant1 = document.getElementById("elephant1");
+        var elephant = document.getElementById("elephant");       
+        elephant.onclick = function () {
+            elephant1.play();
+        }
+
+        var tiger1 = document.getElementById("tiger1");
+        var tiger = document.getElementById("tiger")       
+        tiger.onclick = function () {
+            tiger1.play();
+        }
+
+        var horse1 = document.getElementById("horse1");
+        var horse = document.getElementById("horse");      
+        horse.onclick = function () {
+            horse1.play();
+        }
+
+        var hen1 = document.getElementById("hen1");
+        var hen = document.getElementById("hen");        
+        hen.onclick = function () {
+            hen1.play();
+        }
+
+        var gorilla1 = document.getElementById("gorilla1");
+        var gorilla = document.getElementById("gorilla");       
+        gorilla.onclick = function () {
+            gorilla1.play();
+        }
+
+        var bee1 = document.getElementById("bee1");
+        var bee = document.getElementById("bee");
+        bee.onclick = function () {
+            bee1.play();
+        }
+
+    </script>
+</body>
+
+</html>

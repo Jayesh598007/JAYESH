@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("windmill.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100vw;
+            padding: auto;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80vw;
+            height: 80vh;
+            background-color: rgb(0, 0, 0);
+            border-radius: 20px;
+            opacity: 0.3;
+            position: relative;
+            z-index: 1;
+        }
+
+        .class {
+            padding: 20px;
+            width: 90vw;
+            height: 90vh;
+            position: fixed;
+            z-index: 2;
+            font-size: 30px;
+        }
+
+        .class #p1 {
+            padding: 50px 32vw 40px 32vw;
+            font-weight: bolder;
+            font-stretch: ultra-expanded;
+            color: rgb(241, 143, 143);
+        }
+
+        .class #p2 {
+            padding: 40px 110px;
+            color: rgb(243, 231, 66);
+        }
+
+        .class #p3 {
+            padding: 30px 230px;
+            color: rgba(253, 171, 18, 0.986);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu"></div>
+    <div class="class">
+        <p id="p1">Welcome to Paradise!!</p>
+        <p id="p2">
+            Customers expect more for their money and want to stay in spaces that are inspiring and energizing
+            and this is the reason we exist. Each Ginger hotel intermixes work and play, the individual and the
+            collective, the local and the global - so that you get more fun than you can imagine. What's more, our
+            pocket-friendly accommodations are built on the solid century-old expertise of IHCL, our parent company. In
+            light of the prevailing COVID-19 global pandemic, we have expanded the scope of Ginger Promise to include
+            the implementation of COVID-19 precautionary measures across all the Ginger Hotels under the umbrella of the
+            5G Ginger Safety Assurance.
+        </p>
+        <p id="p3">ENTRUST YOUR SAFETY TO GINGER HOTELS!</p>
+    </div>
+</body>
+
+</html>

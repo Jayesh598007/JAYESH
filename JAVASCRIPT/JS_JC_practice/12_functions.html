@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div class="function">
+        <p>
+            @ function is a block of code designed to perform a particular task
+            @ function is executed only when it is called
+            <script>
+                function myFunc (p1, p2){       // function name with parameters in ( ) 
+                    return p1 *p2;              // code to be executed
+                }
+                console.log(myFunc(6, 2));      // calling the function with arguments in ( )
+            </script>
+        </p>
+    </div>
+
+    <div class="return">
+        <p>when JS reaches a 'return' statement, the function will stop executing
+            <script>
+                let x = myFunction(6, 3);       
+                // function is called, return value will end up in x
+
+                function myFunction(a, b){
+                    return a * b;                // function returns the product of a and b
+                }
+
+                console.log(x);                 // value of x is shown in console
+            </script>
+        </p>
+    </div>
+
+    <div class="advantage">
+        <p> Advantage of using Function:
+            >> Define the code once, and use it many times
+            >> You can use the same code many times with different arguments, to produce different results
+            <p id="demo"></p>
+
+            <script>
+                // function
+                function toCelcius(farhenheit){         
+                    return (5/9) * (farhenheit-32);
+                }
+
+                // Accessing the function with ( ), will return the function result
+                document.getElementById('demo'). innerHTML = "the answer is " + toCelcius(96);
+
+                // Accessing the function without ( ), will return the function object instead of the function result
+                document.getElementById('demo'). innerHTML = "the answer is " + toCelcius;
+            </script>
+        </p>
+    </div>
+
+    <div class="local_variables">
+        <p> 
+            @ Variables declared within a function are local variables
+            @ Local variables can only be accessed from within the function
+            <script>
+                // code here can NOT use carName
+                function demo(){
+                    let carName = "Volvo";
+                    // code here can use carName
+                }
+                // code here can NOT use carName
+            </script>
+        </p>
+    </div>
+</body>
+</html> 

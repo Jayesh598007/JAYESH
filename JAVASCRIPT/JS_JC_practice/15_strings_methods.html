@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div class="strings">
+        <script>
+            // escape character in string >> using backslash ( \ )
+            let demo = "we are the \"vikings\" from \n the north";
+            console.log(demo);
+        </script>
+        <p>
+            Six other escape sequences are valid in JavaScript:
+            \b >> Backspace
+            \f >> Form Feed
+            \n >> New Line
+            \r >> Carriage Return
+            \t >> Horizontal Tabulator
+            \v >> Vertical Tabulator
+        </p>
+    </div>
+
+    <div class="strings as Objects">
+        <script>
+            let x = "john";
+            console.log(typeof x);          // string
+            
+            // strings can also be defined as objects with the keyword "new"
+            let y = new String("john");
+            console.log(typeof y);          // object
+
+            // === operator expects equality in data value()
+            console.log(x == y);            //true
+            
+            // === operator expects equality in both data type and value
+            console.log(x === y);           //false
+        </script>
+        <p>JS objects cannot be compared, thus it will always return false
+            <script>
+                let t1 = new String("jayesh");
+                let t2 = new String("jayesh");
+                console.log(t1 == t2);      //false
+                console.log(t1 === t2);     //false
+            </script>
+        </p>
+    </div>
+    
+    <div class="string methods">
+        <p>
+            <script>
+                let str = "apple, banana, kiwi";
+                
+                // slice() extracts a part of a string and returns the extracted part in a new string
+                console.log(str.slice(7, 13));          // return banana
+                console.log(str.slice(-12, -6));        // return banana
+                
+                // substring() {similar to slice(), but} cannot accept negative indexes
+                console.log(str.substring(7, 13));      // return banana
+                
+                // substr() {is similar to slice(), but} the second parameter specifies the length of the extracted part
+                console.log(str.substr(7, 6));          // return banana              
+                console.log(str.substr(-4));            // return kiwi            
+            </script>
+        </p>
+
+        <p>
+            <script>
+                let text = ("please, visit Microsoft and, Microsoft");
+                
+                // replace() method replaces the specified value with another
+                let newText1 = text.replace("Microsoft", "Apple");           //  ("old_word", "new_word")
+                console.log(newText1);          // return Apple instead of Microsoft(once)
+                
+                // it is case sensitive
+                // thus to make it case insensitive, use '/i' flag
+                let newText2 = text.replace(/microsoft/i, "Samsung");        //  ( /old_word/i , "new_word")
+                console.log(newText2);          // return Samsung instead of Microsoft(once)
+                
+                // it replaces only first matching word
+                // thus to replace all matches, use '/g' flag
+                let newText3 = text.replace(/Microsoft/g, "Reliance");
+                console.log(newText3);          // return Reliance instead of all Microsoft 
+            </script>
+        </p>
+    
+        <p>
+            <script>
+                let text1 = "Hello World!";
+                // toUpperCase()
+                console.log( text1.toUpperCase() );      // returns HELLO WORLD!
+
+                // toLowerCase()
+                console.log( text1.toLowerCase() );      // returns hello world!
+
+                // concat()  >> joins two strings
+                let ta =  "Hello";
+                let tb =  "Jayesh";
+                console.log(ta.concat(" ", tb));        // returns Hello Jayesh
+
+                // trim()   >> removes whitespaces from both sides
+                let txt = "          Hello  World               ";
+                console.log(txt.trim());                // returns Hello  World               
+            </script>
+        </p>
+
+        <p>
+            <script>
+                let pad1 = "5";
+                // padStart()  >>  to support padding at the beginning
+                console.log(pad1.padStart(4, 0)); 
+                
+                // PadEnd()    >>  to support padding at the end
+                console.log(pad1.padEnd(4, 0));
+            </script>
+        </p>
+
+        <p>
+            <script>
+                let char1 = "Hello Jayesh"
+                // charAt() method returns the character at a specified index(position)
+                console.log(char1.charAt(6));         // returns J
+
+                // charCodeAt() method returns the unicode of the character at specified index
+                console.log(char1.charCodeAt(6));     // return 74
+
+                // Property access [ ]
+                console.log(char1[6]);                // returns J
+            </script>
+        </p>
+
+        <p>
+            <script>
+                // If you want to work with a string as an array, you can convert it to an array.
+
+                console.log(text.split(","));         // split on commas
+                console.log(text.split(" "));         // split on spaces
+                console.log(text.split("|"));         // split on pipe
+            </script>
+        </p>
+    </div>
+</body>
+
+</html>

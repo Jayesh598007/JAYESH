@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div class="arithmatic operator">
+        <script>
+            let x =23;          //assignment operator
+            let y = 12;
+            
+            let z = x+y;        // adddition operator
+            let z = x-y;        // substraction operator
+            let z = x/y;        // division operator
+            let z = x*y;        // multiplication operator
+            let z = x**y;       // Exponential(squares) operator ==> same as Math.pow(x,y);
+            let z = x%y;        // Modulus(remainder) operator
+            x++;                // incrementing operator
+            x--;                // decrementing operator
+        </script>
+    </div>
+
+    <div class="assignment operator">
+        <p>
+            <!--   
+                =          // x = y   
+                +=         // x = x + y   
+                -=         // x = x - y 
+                *=         // x = x * y  
+                /=         // x = x / y   
+                %=         // x = x % y   
+                **=        // x = x ** y     
+             -->
+        </p>
+    </div>
+
+    <div class="string Operator">
+        <p>
+            '+' operator is used to add(concatenate) two strings
+            <script>
+                let text1 = "john";
+                let text2 = "Kennedy";
+                let total = text1 + " " + text2;
+                console.log(total);         // john kennedy
+            </script>
+        </p>
+        <p>
+            '+=' operator is also used to add two strings
+            <script>
+                let txt1 = "jayesh is ";
+                txt1 += "a good boy";
+                console.log(txt1);          // jayesh is a good boy
+            </script>
+        </p>
+    </div>
+
+    <div class="comparision operator">
+        <p>
+            <!-- 
+                ==	        // equal to
+                ===	        // equal value and equal type
+                !=	        // not equal
+                !==	        // not equal value or not equal type
+                >	        // greater than
+                <	        // less than
+                >=	        // greater than or equal to
+                <=	        // less than or equal to
+                ?	        // ternary operator
+             -->
+        </p>
+    </div>
+
+    <div class="logical Operator">
+        <p>
+            <!-- 
+                &&	        // logical and
+                ||	        // logical or
+                !	        // logical not
+             -->
+        </p>
+    </div>
+    
+    <div class="Type Operators">
+        <p>
+            <!-- 
+                typeof          // Returns the type of a variable
+                instanceof	    // Returns true if an object is an instance of an object type
+             -->
+            <script>
+                console.log(typeof 42);
+                console.log(typeof "harry");
+                console.log(typeof true);
+            </script>
+        </p>
+    </div>
+
+    <div class="operator Precedence">
+        <p>Operator precedence describes the order in which operations are performed</p>
+        <p>
+            ( )     // 	Expression grouping	       // (3 + 4)         
+        	.	    //  Member	                   // person.name
+        	[]      // 	Member	person             // ["name"]
+        	()      // 	Function call	           // myFunction()
+        	new     // 	Create	                   // new Date()
+	        |	    // Bitwise OR	               // x | y
+            &	    // Bitwise AND      	       // x & y
+        	^	    // Bitwise XOR      	       // x ^ y
+            <<      // Shift left	               // x << 2
+        	>>	    // Shift right	               // x >> 2
+        </p>
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let</title>
+</head>
+<body>
+    <div class="let_vs_var">
+        <p> 
+            @ Variables defined with 'let' cannot be Redeclared
+            @ Variables defined with 'let' have Block Scope, thus limited to the function {  } only
+            <script>
+                {
+                    let x = 8678;
+                }
+                console.log(x);         // x cannot be accessed outside the block
+            </script>
+        </p>      
+        <p>
+            @ Variables defined with 'var' can be Redeclared
+            @ variables defined with 'var' have global scope, even if defined in { }, can be accessed outside the block
+            <script>
+                {
+                    var y = 654;
+                }
+                console.log(y);     // y can be accessed outside the block
+            </script>
+        </p>  
+    </div>
+
+    <div class="problem">
+        <p>Problems with variables var</p>
+        <script>
+            var x = 10;     // here x is 10
+
+            {
+                let x = 2;      // here x is 2
+            }
+            // here x is still 10 
+
+            {
+                var x = 4;      // here x is 4
+            }   
+            // here x is changed to 4
+        </script>
+    </div>
+
+    <div class="declare">
+        <p>
+            @ let variables cannot be redeclared as below
+            <script>
+                let x = "john";
+                let x = 78;
+                console.log(x);   // syntax error : let x already declared
+            </script>
+        </p>
+        <p>
+            @ var variables can be redeclared as below
+            <script>
+                var x = "john";
+                var x = 6857;
+                console.log(x);      // x = 6857 
+            </script>
+        </p>
+    </div>
+
+    <div class="reassign">
+        <p>
+            @ let variables can be reassigned as given below
+            <script>
+                let x = 345;
+                x = "jayesh";
+                console.log(x);
+            </script> 
+        </p>
+    </div>
+
+    <div class="redeclare">
+        <p> @ with var, redeclaring a  variable is allowed anywhere in program
+            <script>
+                var x = 12;   // now x is 12
+                var x = 34;   // now x is 34
+                </script>
+        </p>
+        <p> @ with let, redeclaring a variables is not allowed in same block, whereas in anther block is allowed
+            <script>
+                var x = 789;     // allowed
+                let x = 2354;    // not allowed
+
+                {
+                    let a = 324;     // Allowed
+                    let a = 23;     // Not allowed
+                }
+
+                {
+                    let a = 129;       // allowed
+                    var a = 234;       // Not allowed
+                }
+            </script>    
+        </p>
+    </div>
+
+    <div class="hoisting">
+        <p>We can use the 'var' variable before it is declared
+            <script>
+                carName = "Volvo";
+                var carName;            // Allowed
+            </script>
+        </p>
+        <p>We cannot use 'let' variable before it is declared
+            <script>
+                carName = "Nano";
+                let carName;            // Not allowed :  Referance Error
+            </script>
+        </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>const</title>
+    <link rel="shortcut icon" href="#" >
+</head>
+
+<body>
+    <div class="const">
+        <p> 
+            @ Variables defined with const cannot be Redeclared
+            @ Variables defined with const cannot be Reassigned          
+            @ Variables defined with const have Block Scope
+
+            @ As a general rule, Use const when you declare: 
+                >> A new Array
+                >> A new Object
+                >> A new Function
+                >> A new RegExp
+        </p>
+    </div>
+
+    <div class="assign">
+        <p>'const' variables must be assigned a value when declared</p>
+        <p>'const' variables cannot be reassigned</p>
+        <script>
+            const pi = 3.1414;      // correct
+            
+            const pi;               // Incorrect : will show error             
+            pi = 3.14;
+
+            // reassign not allowed
+            pi = 22/7;          // will give error
+            pi = pi +10;        // will also give error
+        </script>
+    </div>
+
+    <div class="object_and_arrays">
+        <p>the keyword 'const' here defines constant referance to a value
+            Because of this you can NOT:
+             >> Reassign a constant value
+             >> Reassign a constant array
+             >> Reassign a constant object
+
+            But you CAN:
+             >> Change the elements of constant array
+             >> Change the properties of constant object
+        </p>
+    </div>
+
+    <div class="array">
+        <script>
+            // create const array
+            const cars = ["toyata", "Harrier", "Nexon"];  
+            cars[0] = "Alexa";      // to change element
+            cars.push("Audi");      // to add element
+            console.log(cars);      // to display array in console
+
+            // can NOT reassign array
+            cars = ["Innova", "Fortuner", "Endeavour"];     // display error
+        </script>
+    </div>
+
+    <div class="objects">
+        <script>
+            // create an object
+            const car = { type:"fiat", year:1992, color: "grey"};
+            car.color = "white";    // to change element
+            car.owner = "John";     // to add element
+            console.log(car);       // to display object in console
+
+            // can NOT reassign object
+            car = {type:"Volvo", model:"EX60", color:"red"}        // display error
+        </script>
+    </div>
+
+    <div class="blockscope">
+        <p>The x declared in the block, is not same as x declared outside the block</p>
+        <script>
+            const x = 10;  
+            // here x is 10
+
+            {
+                const x = 4;      
+                // here x is 4
+            }
+            
+            //here x is 10;
+        </script>
+    </div>
+
+    <div class="redeclare">
+        <p>Redeclaring an existing var or let variable to const, is not allowed</p>
+        <script>
+            var x =  20;        // allowed
+            const x = 546;      // not allowed
+
+            {
+                let x = 2;      // allowed
+                const x = 2;    // not alowed
+            }
+
+            {
+                const x = 5;    // allowed
+                constx = 6;     // not allowed
+            }
+        </script>
+    </div>
+
+    <div class="reassign">
+        <p>
+            reassigning a variable with const, in same scope, is not allowed 
+            <script>
+                const x = 35;       // allowed
+                x = 4;              // not allowed
+                var x = 10;         // not allowed
+                let x = 10;         // not allowed    
+                const x = 10;       // not allowed
+                
+                {
+                    const x = 35;       // allowed
+                    x = 4;              // not allowed
+                    var x = 10;         // not allowed
+                    let x = 10;         // not allowed    
+                    const x = 10;       // not allowed
+                }
+            </script>
+        </p>
+        <p>
+            redeclaring a variable with const, in another scope/ block, is allowed 
+            <script>
+                const x = 345;          // allowed
+
+                {
+                    const x = 436;      // allowed
+                }
+
+                {
+                    constx = 39;        // allowed
+                }
+            </script>
+        </p>
+    </div>
+</body>
+</html>
+
+
+
+
+

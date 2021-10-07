@@ -1,0 +1,27 @@
+<!DOCTYPE html> -- #specifies this is an html 5 doc
+<html>  -- #root of an html page
+<head> --  #contains page metadata
+    <title> Jayesh </title> -- #contains web title
+</head>  -- #closing head tag
+
+<body>  -- #this is the main body of the page(produced by the browser)
+    <h1>Heading</h1>  -- #heading tag 
+    <p>Paragraph</p>  -- #Paragraph tag
+</body>  -- #closing body tag
+</html>  -- #closing html tag
+
+...........................................
+
+<h1>    --- #tag
+<h1>Heading</h1>    --- #element
+HTML element = start tag + content + end tag
+.......................................................
+
+comment are those text which are written in a code but are not expected to render/run
+html comment is written as (     <!-- HTML comment -->      )
+
+..........................................
+
+html is not case sensitive language
+thus, we can use P insted of p, H1 instead of h1, etc
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Output</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <!-- JavaScript can "display" data in different ways: -->
+
+    <div class="dis_1">
+        <!-- using 'innerHTML' -->
+        <p id="demo">(:~)</p>
+        <button onclick="document.getElementById('demo').innerHTML= 'I am Jayesh Chaudhari - '+ (500+98)">Show</button>
+        <button onclick="document.getElementById('demo').innerHTML= '(:~)'">Erase</button>
+    </div>
+
+    <div class="dis_2">
+        <!-- using 'document.write()' -->
+        <script>
+            document.write("Hello, you are Welcome")
+        </script>
+
+        <!-- Using document.write() in an HTML document is loaded, will delete all existing HTML -->
+        <button style="margin: 10px"
+            onclick="document.write('<b>Load the page again to bring previous content</b>')">Click Here</button>
+    </div>
+
+    <div class="dis_3">
+        <!-- using 'alert()' -->
+        <!-- use an alert box to display data when page is loaded -->
+        <script>
+            window.alert("Hello, Jayesh!");
+        </script>
+    </div>
+
+    <div class="dis_4">
+        <!-- using 'console.log()' -->
+        <!-- below text can only be seen in the console  -->
+        <script>
+            console.log("Javascript Tutorial")
+        </script>
+    </div>
+
+    <div class="print">
+        <!-- JavaScript does not have any print object or print methods -->
+        <!-- this allows us to print current webpage -->
+        <button onclick='printFunc()'>Print this page</button>
+        <script>
+            function printFunc() {
+                console.log('printed this page');
+                window.print();
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>

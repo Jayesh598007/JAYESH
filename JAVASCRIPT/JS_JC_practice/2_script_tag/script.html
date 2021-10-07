@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Script Tag</title>  
+</head>
+
+<body>
+    <div class="fontColor">
+        <!-- we can use 'function()' to assign any task  -->
+        <h1 id="text">Hello, Jayesh</h1>
+        <button onclick="red()">RED</button>
+        <button onclick="black()">BLACK</button>
+        <button onclick="blue()">BLUE</button>
+    </div>
+
+    <div class="para">
+        <p id="demo">This is a Praragraph</p>
+        <button type="button" onclick="myFunc()">Try it</button>
+    </div>
+
+    
+
+    <script src="script.js">
+        // using external JS 
+        // There can be several JS external scripts 
+    </script>
+
+    <script>
+        // using script tag
+        // A JS function() is a block of JavaScript code, that can be executed when "called" for
+        function myFunc() {
+            document.getElementById("demo").innerHTML = "Paragraph is changed";
+        }
+    </script>
+</body>
+
+</html>

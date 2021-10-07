@@ -1,0 +1,26 @@
+/* CSS  */
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 20px;
+  padding: 20px;
+  background-color: lightcoral;
+}
+h1 {
+  color: darkcyan;
+}
+.Box{
+  border: 2px solid red;
+  margin:  4px 0; 
+  background: pink;
+  padding: 9px ;
+}
+.bg-primary{
+  background: blueviolet;
+}
+.text-changed{
+  color: darkcyan;
+}
+

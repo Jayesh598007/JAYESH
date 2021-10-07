@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statements</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div class="statement">
+        <p>programming instructions are called statements. JS Statements consist of: Values, Operators, Expressions, Keywords, and Comments
+        </p>
+        <p id="demo"></p>
+        <script>
+            let x, y, z;        //statement 1  -- declare
+            x = 5;              //statement 2  -- assign x
+            y = 6;              //statement 3  -- assign y
+            z = x + y;           //statement 4  -- assign sum of x and y to z
+            document.getElementById("demo").innerHTML = ("The answer is " + z);   // statement 5
+        </script>
+    </div>
+
+    <div class="semicolon">
+        <p>Semicolon (;) separates the JS statements</p>
+        <!-- when separated, multiple statements in one line are allowed  -->
+        <!-- let x, y, z; x = 5; y = 67; z = x+y;         // can also be written as -->
+    </div>
+
+    <div class="whitespace">
+        <p>JS ignores the whitespaces , we can add white spaces to statements to make it more readable</p>
+        <p id="persona"></p>
+        <script>
+            let person1 = "  john  ";
+            let person2 = "   John    1   ";
+            document.getElementById('persona').innerHTML = person1 + " , " + person2;
+        </script>
+    </div>
+
+    <div class="lineLength">
+        <p>For better readabilty, line length should not be more than 80 characters</p>
+        <!-- line breaks can be added to the JS statement as given below -->
+        <p id="read"></p>
+        <script>
+            document.getElementById('read').innerHTML= 
+            "Hello Dolly";
+        </script>
+    </div>
+
+    <div class="codeBlocks">
+        <p>code blocks are  {  } and are most commonly used in functions </p>
+        <script>
+            function cdFunc(){
+                document.getElementById('sample').innerHTML = "sample Text 2";
+                document.getElementById('sample2').innerHTML = "sample Text";
+            }
+        </script>
+    </div>
+
+    <div class="keywords">
+        <!-- JS keywords are reserved words and cannot be used as names for variables -->
+        <p>
+            var	-- Declares a variable
+            let	-- Declares a block variable
+            const -- Declares a block constant
+            if -- Marks a block of statements to be executed on a condition
+            switch -- Marks a block of statements to be executed in different cases
+            for	 -- Marks a block of statements to be executed in a loop
+            function --	Declares a function
+            return -- Exits a function
+            try	-- Implements error handling to a block of statements
+        </p>  
+    </div>
+
+
+</body>
+
+</html>

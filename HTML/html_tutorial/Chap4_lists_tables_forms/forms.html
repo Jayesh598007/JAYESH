@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <div>
+        <p><b>Travel form for our school trip</b></p>
+        <form action="form.py">
+            <div>
+                <!-- input type = text/email/number -->
+                <input type="text" placeholder="Enter your Name">
+                <input type="email" placeholder="Your Email">
+                <input type="number" placeholder="Contact number">
+            </div>
+            <hr>
+            <div>
+                <!-- input type = radio -->
+                <p>Your Graduation: </p>
+                <label for="radio1">
+                    <input type="radio" Value="BE" name="name" id="radio1">BE <br>
+                </label>
+
+                <label for="radio2">
+                    <input type="radio" Value="BTech" name="name" id="radio2">BTech <br>
+                </label>
+
+                <label for="radio3">
+                    <input type="radio" Value="BSc" name="name" id="radio3">BSc
+                </label>
+
+            </div>
+            <hr>
+            <div>
+                <!-- for input type = checkbox -->
+                <input type="checkbox" name="Want food canteen card" id="food canteen" class="red"> Are you
+                Selfemployed? If YES, Tick here
+            </div>
+            <hr>
+            <div>
+                <!-- for input type = date -->
+                <label for="DOB">
+                    <input type="date" name="Your Birth Date" id="DOB">
+                </label>
+            </div>
+            <hr>
+            <div>
+                <!-- for select element = to choose any one from given data   -->
+                <select name="Graduation Year" id="Graduation"> When did you complete your graduation?
+                    <option value="default">Select the year</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                </select>
+            </div>
+            <hr>
+            <div>
+                <!-- for input type = file -->
+                <p>Upload your Resume:</p>
+                <label for="Resume">
+                    <input type="file" name="Upload your Resume" id="Resume">
+                </label>
+            </div>
+            <hr>
+            <div>
+                <!-- adding a text area to provide a box for the user to write something -->
+                <textarea name="explain" id="explain" cols="30" rows="10"
+                    placeholder="Tell us about yourself"></textarea>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+
+
+<!-- Check more of these input methods on this below given link -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->

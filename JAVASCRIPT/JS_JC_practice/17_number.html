@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div class="number">
+        <p>
+            JS has only one type of number
+            <script>
+                let m = 3.14;       // num with decimal
+                let n = 3;          // num without decimal
+                let o = 3e6;        // num with exponential
+                let p = 3e-5;       // num with negative exponential
+                console.log(m, n, o, p);    
+                </script>
+        </p>
+        <p>
+            Precision
+            <script>
+                // integers are accurate up to 15 digits
+                let a = 999999999999999;        // return same 
+                let b = 9999999999999999;       // returns next round number                 console.log(a,b);
+                console.log(a , b);    
+            </script>
+        </p>
+    </div>
+    <div class="numeric strings">
+        <p>
+            <script>
+                // adding two numeric strings will concatenate strings(not adding)
+                console.log(10 + "20");         // 1020
+                console.log("10" + "20");       // 1020
+
+                // but, JS will try to convert string to number in all numeric operation
+                console.log("100" - "10");      // 90
+                console.log("100" * "10");      // 1000
+                console.log("100" / "10");      // 10
+
+                // above operations will not perform in adding, coz it concatenate strings 
+            </script>
+        </p>
+        <p>
+            Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number)
+            <script>
+                let x = 100 / "apple";          // it will be a NaN (Not a Number)
+                console.log(isNaN(x));          // returns true
+                
+                let y = 100 / "20";             // is not a NaN
+                console.log(isNaN(y));          // returns false
+
+                let z = NaN;
+                console.log(z + y),             // returns NaN
+                console.log(typeof z);          // type number
+            </script>
+        </p>
+        <p>
+            infinity is a number outside the largest possible number
+            <script>
+                let infi = 10 / 0
+                console.log(infi);              // returns infinity
+                console.log(typeof infi);       // type number
+            </script>
+        </p>
+        <p>
+            @ Hexadecimal is base 16
+            @ Decimal is base 10  (by default)
+            @ Octal is base 8
+            @ Binary is base 2
+
+            you can use the toString() method to output numbers from base 2 to base 36
+            <script>
+                let myNumber = 32;
+                console.log(myNumber.toString(10));        // 32
+                console.log(myNumber.toString(32));        // 32
+                console.log(myNumber.toString(16));        // 20
+                console.log(myNumber.toString(8));         // 40
+                console.log(myNumber.toString(2));         // 100000
+            </script>
+        </p>
+    </div>
+
+    <div class="numbers as objects">
+        <p>
+            numbers can be defined as objects with the keyword "new"
+            <script>
+                let num1 = 123;                     // typeof num1 is number
+                let num2 = new Number(123);         // typeof num2 is object
+                let num3 = new Number(123);         // typeof num3 is object
+
+                console.log(num1 == num2);          // true (expects equality in only value)
+                console.log(num1 === num2);         // false (expects equality in both type and value)
+                console.log(num2 == num3);          // false (objects cannot be compared)
+            </script>
+        </p>
+    </div>
+</body>
+</html>

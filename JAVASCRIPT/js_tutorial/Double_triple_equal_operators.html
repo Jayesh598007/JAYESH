@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <div id="double">
+    <h1>Double equal Operator </h1>
+    <h3> It compares the two elements by their values irrespective of their types(number, string, etc)</h3>
+    <p id="demonstration"></p>
+  </div>
+
+  <div id="triple">
+    <h1>Triple equal Operator</h1>
+    <h3>It compares strictly the two elements by their values and their types(number, string, etc)</h3>
+    <p id="demo"></p>
+  </div>
+
+  <script>
+    var a = '10';             // variable type is string
+    // Double equal(==) operator
+    document.getElementById("demonstration").innerHTML = (a == 10);     // true
+
+    // Triple equal(===) operator
+    document.getElementById("demo").innerHTML = (a === 10);           // false
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div class="intro">
+        <p>
+            @ HTML events are "things" that happen to HTML elements
+            @ An HTML event can be something the browser does, or something a user does
+
+            some examples of 'events':
+            >> webpage has finished loading
+            >> button was clicked
+            >> input field has changed
+
+            When events happen, you may want to do something
+            HTML allows event handler attributes, with JS, to be added to HTML elements
+
+            <!-- <element event = "some JS code">                  -->
+        </p>
+    </div>  
+    
+    <div class="examples">
+        <p>
+            # changes the content of other element with id = "demo"
+            <button onclick="document.getElementById('demo').innerHTML = Date()">Display Date</button>
+            <p id="demo"></p>
+            <hr>
+
+            # changes the content of its own using(this.innerHTML)
+            <button onclick="this.innerHTML = Date()">Display Date</button>
+            <hr>
+            
+            # when JS codes are long, we can call a function with long JS codes in it
+            <button onclick="displayDate()">Display Date</button>
+            <p id="date"></p>
+            <script>
+                function displayDate(){
+                    document.getElementById('date').innerHTML = Date();
+                }
+            </script> 
+        </p>
+    </div>
+
+    <div class="events">
+        <p>
+            onchange         >>  An HTML element has been changed
+            onclick	         >>  The user clicks an HTML element
+            onmouseover	     >>  The user moves the mouse over an HTML element
+            onmouseout       >>  The user moves the mouse away from an HTML element
+            onkeydown	     >>  The user pushes a keyboard key
+            onload           >>  The browser has finished loading the page
+        </p>
+    </div>
+</body>
+</html>

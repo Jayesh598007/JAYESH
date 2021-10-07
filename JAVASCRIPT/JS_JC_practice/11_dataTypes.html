@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <link rel="shortcut icon" href="#" >
+</head>
+
+<body>
+    <div class="dataTypes">
+        <p>
+            @ JS variables can store diff types of data: 
+            >> Numbers
+            >> Objects
+            >> Strings
+            <script>
+                var length = 16;            // number
+                var name = "jayesh";        // string
+                var x = {firstName: "Jayesh", lastName:"Chaudhari"};        // object
+                console.log(typeof length, typeof name, typeof x);
+            </script>
+        </p>
+    </div>
+
+    <div class="sequence">
+        <p>When adding a number and a string, JavaScript will treat the number as a string</p>
+        <script>
+            let a = 3;
+            let b = 2;
+            let c = "jayesh";
+            console.log(a + b + " " + c);       // 5 jayesh
+            console.log(c +" " + a + b);       // jayesh 32
+        </script>
+    </div>
+
+    <div class="dynamic">
+        <p> @ JavaScript has dynamic types
+            @ The same variable can be used to hold different data types
+            <script>
+                var x,                  // x is undefined
+                x = 5;                  // now x is number
+                x = "jayesh";           // now x is string
+            </script>
+        </p>
+    </div>
+
+    <div class="strings, numbers and booleans">
+        <p>
+            Strings
+            <script>
+                let name1 = 'I have "Volvo"';        // using double quotes inside single quotes
+                let name2 = " Toyota's car ";        // using single quotes inside double quotes              
+           </script>
+        </p>
+        <p>
+            Numbers
+            <script>
+                let x1 = 4.56;      // num with decimal
+                let x2 = 3;         // num without decimal
+
+                let y1 = 123e5;     // 12300000  (extra large number having exponential)
+                let y2 = 123e-5;    // 0.00123   (extra small number having exponential)
+            </script>
+        </p>
+        <p>
+            @ Booleans: 'true' and 'false'
+            @ Often used in conditional testing
+            <script>
+                let f = 4;
+                let g = 5;
+                let j = 4;
+                console.log(f == g);          // returns false
+                console.log(f == j);         // returns true
+            </script>
+        </p>
+    </div>
+
+    <div class="arrays and object">
+        <p>
+            @ arrays are written with square brackets [ ]
+            @ Array indexes are zero-based, which means the first item is [0], second is [1], and so on
+            <script>
+                let cars =["toyota", "tata", "tesla", "hyundai"];
+                console.log(cars[0], cars[2]);
+            </script>
+        </p>
+        <p>
+            @ objects are written with curly braces { }
+            @ Object properties are written as 'name:value' pairs, separated by commas
+            <script>
+                const person ={firstName: "jayesh", lastName: "chaudhari",contact: 8936482,age: 23};
+                console.log(person);
+            </script>
+        </p>
+    </div>
+
+    <div class="undefined">
+        <p>
+            @ in JS,a variable without a value, has the value undefined
+            @ the type is also undefined
+            <script>
+                let car;        
+                console.log(car);           // value is undefined
+                console.log(typeof car);    // type is undefined
+            </script>
+        </p>
+    </div>
+    
+</body>
+</html>
