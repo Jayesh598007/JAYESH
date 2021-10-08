@@ -30,7 +30,7 @@ def contact(request):
         desc = request.POST.get('desc')
         contact = Contact(name= name, email= email, phone= phone, desc= desc, date = datetime.today())
         contact.save()
-        messages.success(request, "Your request has been successfully send!!")
+        messages.success(request, "Your request has been successfully sent !!")
         
     return render(request, 'contact.html')
     # return HttpResponse(" Contact us on : jayeshchau598007@gmail.com")
