@@ -10,7 +10,64 @@
 
 <body>
     <div class="arrays">
-            
+        <p> arrays are used to store multiple values in a single variable.
+            <script>
+                const cars= [ "Volvo","harrier","cruiser"];  // creating an array
+
+                cars[3]  = "innova";            // adding new value to array
+                console.log(cars);              // accessing full array
+                console.log(cars[1]);           // accessing array item
+                cars[2]= "Nexon";               // changing array item
+                console.log(typeof cars);       // type of array -- object
+            </script>
+        </p>
+        <p>
+            >> you can have objects in array
+            >> you van have functions in array 
+            >> you can have arrays in array
+            <script>
+                const myArray= [];
+                myArray[0] = Date.now;        // adding object in array
+                // myArray[1] = myFuncions;      // adding function in array
+                // myArray[2] = myCars;          // adding array in array
+            </script>
+        </p>
+    </div>
+
+    <div class="properties">
+        <p id="demo" onclick="document.getElementById('demo').innerHTML = text"> Click here</p>
+        <script>
+            // length of array
+            const fruits = ["mango","kiwi","banana","apple","orange"];
+            console.log(fruits.length);
+
+            // looping array elements
+            fLen = fruits.length;
+            text="<ul>";
+            for (let i = 0; i<fLen; i++) {
+                text +="<li>" + fruits[i] + "</li>";
+            }
+            text += "</ul>";
+
+            // adding array elements
+            fruits.push= "lemon";            // adds new element at the end
+
+            // create an array with 12(n) undefined elements
+            const myArr = new Array(12);
+
+            // typeof array is object
+            console.log(typeof fruits);             // returns objects
+
+            // to recognise whether a variable is an array or object
+            console.log(Array.isArray(fruits));     // returns true, if array
+            console.log(fruits instanceof Array);   // returns ture
+        </script>
+
+        <p>
+            diff betn arrays and objects:
+            >> arrays use "numbered" indexes  
+            >> objects use "named" indexes
+        </p>
     </div>
 </body>
 </html>
