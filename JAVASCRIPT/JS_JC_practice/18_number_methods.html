@@ -45,6 +45,49 @@
                 console.log((123).valueOf());           // returns 123 from literal 123
                 console.log((100+23).valueOf());        // returns 123 from expression 100+23
 
+                // number() converts JS variables(string) to numbers
+                // if the number cannot be converted, NaN (Not a Number) is returned
+                console.log(Number(true));          // returns 1
+                console.log(Number(false));         // returns 0
+                console.log(Number("10"));          // returns 10
+                console.log(Number("  10  "));      // returns 10
+                console.log(Number("-10 "));        // returns -10
+                console.log(Number("10.33"));       // returns 10.33
+                console.log(Number("10,23 "));      // returns NaN
+                console.log(Number("John"));        // returns NaN
+
+                // parseint() parses a string and returns a whole number(Integer)
+                console.log(Number("-10"));             // returns -10
+                console.log(Number("-10.33"));          // returns -10
+                console.log(Number("10.2 years"));      // returns 10
+                console.log(Number("years"));           // returns NaN
+                
+                // parseFloat() parses a string and returns a number(floating number)
+                console.log(Number("10.33"));             // returns 10.33
+                console.log(Number("10"));                // returns 10
+                console.log(Number("10 years"));          // returns 10
+                console.log(Number("years 10"));          // returns NaN
+            
+
+                // MAX_VALUE returns the largest possible number in JS
+                var x = Number.MAX_VALUE;
+                console.log(x);
+
+                // MIN_VALUE returns the lowest possible number in JS
+                var x = Number.MIN_VALUE;
+                console.log(x);
+                
+                // POSITIVE_INFINITY represents infinity
+                var x = 1/0;                
+                console.log(x);
+                
+                // NEGATIVE_INFINITY represents infinity
+                var x = -1/0;            
+                console.log(x);
+
+
+
+
 
             </script>
         </p>
