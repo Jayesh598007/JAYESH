@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="array methods">
+        <p>
+            <script>
+                const fruits = [ "mango","apple","kiwi","lemon"];
+
+                // toString() is used for converting arrays to strings(values separated by commas)
+                console.log(fruits.toString());     // returns   mango,apple,kiwi,lemon
+
+                // join() joins all array elements to a string (but with specified separator) 
+                console.log(fruits.join(" * "));    // returns   mango * apple * kiwi * lemon
+
+                // pop() method removes the last element from an array
+                fruits.pop();
+                console.log(fruits);                // returns   mango,apple,kiwi
+
+                // push() method adds new element to an array at the end
+                let x = fruits.push("banana");
+                console.log(fruits);                // returns  mango,apple,kiwi,banana
+                console.log(x);                     // returns array length
+
+                // shift() method removes the first element from an array
+                console.log(fruits.shift());        // removes  'mango'
+            </script>
+        </p>
+    </div>
+</body>
+</html>
