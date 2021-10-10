@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Iteration</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="array Iteration">
+        <p>
+            array num1 = [45, 4, 9, 16, 25]
+        </p>
+        <p>
+            @ map() method creates a new array by performing a function on each array element
+            <br> here, multiply each array element by 2
+            <p id="demo1"></p>
+            <button onclick="funcMap()">Click Here</button>
+
+            <script>
+                const num1 = [45, 4, 9, 16, 25];
+                const num2 = num1.map(myFunc1);
+                
+                function funcMap(){
+                    document.getElementById('demo1').innerHTML = num2;
+                }
+                function myFunc1(value){
+                    return value *2;
+                }
+                console.log(num2);
+            </script>
+        </p>
+
+        <p> 
+            @ forEach() method calls a function once for each array element
+            <br>here, new line after every array element
+            <p id="demo2"></p>
+            <button onclick="funcForEach()">Click Here</button>
+            
+            <script>
+                let txt = " ";
+                num1.forEach(myFunc2);
+
+                function funcForEach(){
+                    document.getElementById('demo2').innerHTML = txt;
+                }
+                function myFunc2(value){
+                    txt += value + "<br>";
+                }
+            </script>
+        </p>
+
+        <p>
+            @ filter() method creates a new array with array elements that passes a test.
+            <br> here, create anew array from elements greater than 18
+            <p id="demo3"></p>
+            <button onclick="funcFilter()">Click Here</button>
+
+            <script>
+                const over18 = num1.filter(myFunc3);
+
+                function funcFilter(){
+                    document.getElementById('demo3').innerHTML = over18;
+                }
+                function myFunc3(value){
+                    return value >18;
+                }
+            </script>
+        </p>
+
+        <p>
+            @ reduce() method runs a function on each array element to produce (reduce it to) a single value
+            <br> here, sum of all array elements
+            <p id="demo4"></p>
+            <button onclick="funcReduce()">Click Here</button>
+
+            <script>
+                let sum = num1.reduce(myFunc4);
+
+                function funcReduce(){
+                    document.getElementById('demo4').innerHTML = sum;
+                }
+                function myFunc4(total, value){
+                    return total + value;
+                }
+            </script>
+        </p>
+
+        <p>
+            @ every() method check if all array values pass a test
+            <br> here, check whether every element are larger than 18
+            <p>All over 18 is: <span id="demo5"></span></p>
+            <button onclick="funcEvery()">Click Here</button>
+
+            <script>
+                let allOver18 = num1.every(myFunc5);
+
+                function funcEvery(){
+                    document.getElementById('demo5').innerHTML = allOver18;
+                }
+                function myFunc5(value){
+                    return value >18;
+                }
+            </script>
+        </p>
+
+        
+        <p>
+            @ some() method check if some array values pass a test
+            <br> here, check whether some array elements are larger than 18
+            <p>Some over 18 is: <span id="demo6"></span></p>
+            <button onclick="funcSome()">Click Here</button>
+            
+            <script>
+                let someOver18 = num1.some(myFunc6);
+
+                function funcSome(){
+                    document.getElementById('demo6').innerHTML = someOver18;
+                }
+                function myFunc6(value){
+                    return value >18;
+                }
+            </script>
+        </p>
+
+        <p>
+            @ indexOf() method searches array value and returns its position
+            <br> here, array index of 25
+            <p>Array Index of 25 in array is: <span id="demo7"></span></p>
+            <button onclick="funcIndexof()">Click Here</button>
+
+            <script>
+                let position = num1.indexOf(25) + 1;
+
+                function funcIndexof(){
+                    document.getElementById('demo7').innerHTML = position;
+                }
+            </script>
+        </p>
+
+        <p>
+            @ includes() checks if an element is present in an array
+            <br> here, checking 70 in array >> false
+            <p>70 is present in array: <span id="demo8"></span></p>
+            <button onclick="funcIncludes()">Click Here</button>
+
+            <script>
+                let present = num1.includes(70);
+
+                function funcIncludes(){
+                    document.getElementById('demo8').innerHTML = present;
+                }
+            </script>
+        </p>
+
+        <p>
+            @ find() method returns the value of the first array element
+            <br> here, number larger than 18
+            <p>The first number larger than 18 in array is : <span id="demo9"></span></p>
+            <p>The index of first number larger than 18 in array is: <span id="demo10"></span></p>
+            <button onclick="funcFind()">Click Here</button>
+
+            <script>
+                let firstNum = num1.find(myFunc9);
+                let firstIndex = num1.findIndex(myFunc10);
+
+                function funcFind(){
+                    document.getElementById('demo9').innerHTML = firstNum;
+                    document.getElementById('demo10').innerHTML = firstIndex;
+                }
+                function myFunc9(value){
+                    return value >18;
+                }
+                function myFunc10(value){
+                    return value >18;
+                }
+            </script>
+        </p>
+        
+        <p>
+            @ Array.from() method returns an Array from string
+            <br> 
+            <p id="demo11"></p>
+            <button onclick="funcFrom()"> Click Here</button>
+
+            <script>
+                ArrNew = Array.from("ETZDXGCHBK");
+
+                function funcFrom(){
+                    document.getElementById('demo11').innerHTML = ArrNew;
+                }
+            </script>
+        </p>
+
+        <p>
+            @ Array.keys() method returns an Array Iterator object with the key of an array 
+            <p id="demo12"></p>
+            <button onclick="funcKeys()">Click Here</button>
+
+            <script>
+                const keys = num1.keys();
+                text = " ";
+
+                for ( let x of keys){
+                    text += x + "<br>";
+                }
+                function funcKeys(){
+                    document.getElementById('demo12').innerHTML = text;
+                }
+            </script>
+        </p>
+    
+    </body>
+</html>

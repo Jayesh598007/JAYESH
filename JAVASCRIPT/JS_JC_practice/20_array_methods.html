@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,12 @@
     <title>Array methods</title>
     <link rel="shortcut icon" href="#">
 </head>
+
 <body>
     <div class="array methods">
         <p>
             <script>
-                const fruits = [ "mango","apple","kiwi","lemon"];
+                const fruits = ["mango", "apple", "kiwi", "lemon"];
 
                 // toString() is used for converting arrays to strings(values separated by commas)
                 console.log(fruits.toString());     // returns   mango,apple,kiwi,lemon
@@ -24,14 +26,67 @@
                 console.log(fruits);                // returns   mango,apple,kiwi
 
                 // push() method adds new element to an array at the end
-                let x = fruits.push("banana");
-                console.log(fruits);                // returns  mango,apple,kiwi,banana
+                var x = fruits.push("banana");
+                console.log(fruits);                // returns modified array
                 console.log(x);                     // returns array length
 
                 // shift() method removes the first element from an array
-                console.log(fruits.shift());        // removes  'mango'
+                var x = fruits.shift();
+                console.log(fruits);                // returns modified array 
+                console.log(x);                     // returns shift value -- 'mango'
+
+                // unshift() method adds new element to an array at the beginning
+                var x = fruits.unshift("melon");
+                console.log(fruits);                // returns modified array
+                console.log(x);                     // returns array length
+
+                // changing element at specified position
+                fruits[0] = "papaya";
+                console.log(fruits);                // element changed at 0 index
+
+                // adding new element using length property, thus it adds the element at end of array
+                fruits[fruits.length] = "melon";
+                console.log(fruits);                // new element added at end
+
+                //  DO   NOT   USE   DELETE   OPERATOR
+                // deleting elements using delete
+                delete fruits[0];                   // delete element of specific position
+                console.log(fruits);                // empty slot in array after deleting element      
             </script>
         </p>
     </div>
+
+    <div class="methods">
+        <script>
+            const cars = ["innova", "nexon", "tiago", "breeza"]
+            /*
+            >> first para(2) defines position to add new element
+            >> second para(0) defines how many elements should be removed
+            >> rest para("figo","creta") defines new elements to be added
+            */
+
+            // splice() method to add new items to an array
+            cars.splice(2, 0, "figo", "creta");        // new elements and its position
+            console.log(cars);                      // returns modified array
+
+            // splice() method to delete an element from array
+            cars.splice(0, 1);                       // delete 1 element at 0 position
+            console.log(cars);                      // returns modified array     
+
+            // concat() method creates a new array by merging existing arrays
+            const girls = ["mayuri", "pranali", "gauri"];
+            const boys = ["jayesh", "kartik", "mahesh"];
+            // const students = girls.concat(boys);        // can take multiple argument
+            const students = girls.concat(boys, "ashwini");    // can take string as an arguments
+            console.log(students);                             // returns 'new' concatenated array
+
+            // slice() method slices out a piece of an array into a new array
+            const allBoys = students.slice(3, 6);             // (start argument, end argument(not including))
+            console.log(allBoys);
+            const remain = students.slice(3);                // (start argument) and end till the end
+            console.log(remain);
+        </script>
+    </div>
 </body>
+
 </html>

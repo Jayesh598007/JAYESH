@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Arrays</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div class="sort">
+        <script>
+            const fruits = ["melon", "apple", "mango", "kiwi"];
+
+            // sort() method sorts an array alphabetically
+            console.log(fruits.sort());             // sorted array
+
+            // reverse() method reverses the elements in an array
+            console.log(fruits.reverse());          // reverse array
+        </script>
+    </div>
+
+    <p> sort() and reverse() doent work for numbers </p>
+
+    <div class="compare">
+        @ The purpose of the compare function is to define an alternative sort order
+        <hr>
+        <button onclick="myfunc1()">Sort alphabetically</button>
+        <button onclick="myfunc2()">Sort numerically</button>
+        <button onclick="myfunc3()">Descending numerically</button>
+        <p id="demo1"></p>
+
+        <script>
+            const Points = [40, 100, 1, 5, 25, 10];
+            document.getElementById('demo1').innerHTML = Points;
+
+            // sorting alphabetically
+            function myfunc1() {
+                Points.sort();
+                document.getElementById('demo1').innerHTML = Points;
+            }
+            // sorting numerically 
+            function myfunc2() {
+                Points.sort(function (a, b) { return a - b });
+                document.getElementById('demo1').innerHTML = Points;
+            }
+            // descending numerically
+            function myfunc3() {
+                Points.sort(function (a, b) { return b - a });
+                document.getElementById('demo1').innerHTML = Points;
+            }
+        </script>
+    </div>
+</body>
+
+</html>
