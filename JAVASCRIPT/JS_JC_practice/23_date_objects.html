@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Objects</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="Date Object">
+        <p id="date" style="border: 2px solid red; border-radius: 10px;width: 50vw; text-align: center; height: 40px;font-weight: 600 ;"></p>
+        <button style="padding: 5px;" onclick="myDate()">show Date</button>
+        <button style="padding: 5px;" onclick="noDate()">erase Date</button>
+
+        <script>
+            // new Date() creates a new date object with the current date and time 
+            const d = new Date();
+            const text = document.getElementById('date').innerHTML;
+            function myDate(){
+                document.getElementById('date').innerHTML = d;
+                document.getElementById('date').style.color = "blue";
+            }
+            function noDate(){
+                document.getElementById('date').innerHTML = text; 
+                document.getElementById('date').style.color = "black";
+            }
+        </script>
+    </div>
+
+    <div class="Date Methods">
+        @ When a Date object is created, a number of methods allow you to operate on it
+        <p>
+            <p id="date1"  style="border: 2px solid red; border-radius: 10px;width: 50vw; text-align: center; height: 30px;font-weight: 600 ;"></p>
+            <button style="padding: 5px;" onclick="myDate1()">toUTCString</button>
+            <button style="padding: 5px;" onclick="myDate2()">toDateString</button>
+            <script>
+                // toUTCString() method converts a date to a UTC string 
+                function myDate1(){
+                    document.getElementById('date1').innerHTML = d.toUTCString();
+                }
+                
+                // toDateString() method converts a date to a more readable format
+                function myDate2(){
+                    document.getElementById('date1').innerHTML = d.toDateString();
+                }
+            </script>
+        </p>
+        <p>
+            @ 6 numbers specify year, month, day, hour, minute, second..... respectively
+            <script>
+                var dt = new Date(2018, 11, 24, 10, 33, 30);    // returns complete date and time
+                var dt = new Date(2018, 11, 24, 10, 33);        // returns without secs
+                var dt = new Date(2018, 11, 24, 10);            // returns without mins and secs
+                var dt = new Date(2018, 11, 24);                // returns only date without time
+                var dt = new Date(2018, 11);                    // returns only year and month
+                console.log("the date is: "+ dt);   
+                // only one parameter is considered as milliseconds
+                var dt = new Date(2018);                        
+                console.log("the date is: "+ dt);   
+            </script>
+        </p>
+    </div>
+
+    <div class="Date Format">
+        <p>
+            <script>
+                // Complete Date
+                var t = new Date("2021-09-25");
+                console.log(t);
+
+                // c Year and Month
+                var t = new Date("2021-09");
+                console.log(t);
+
+                // 2015-03-25 Only year
+                var t = new Date("2021");
+                console.log(t);
+                
+                //  2015-03-25 Date - Time
+                var t = new Date("2021-09-25T12:00:00Z");
+                console.log(t);
+                console.log(typeof t);    // returns object
+            </script>
+        </p>
+    </div>
+
+    <div class="Date Inputs">
+        <p>
+            Zero time is January 01, 1970 00:00:00  --> from when we can access date and time
+            <script>
+                // Date.parse() returns the number of milliseconds between the date and January 1, 1970
+                let msec = Date.parse("12 March 2021")
+                console.log("The date in milliseconds: " + msec);
+
+                let dsec = new Date(msec);
+                console.log("The date: " + dsec);
+            </script>
+        </p>
+    </div>
+
+    <div class="get Date Methods">
+        <p>
+            getFullYear()	     -->  Get the year as a four digit number (yyyy)
+            getMonth()	         -->  Get the month as a number (0-11)
+            getDate()	         -->  Get the day as a number (1-31)
+            getHours()	         -->  Get the hour (0-23)
+            getMinutes()	     -->  Get the minute (0-59)
+            getSeconds()	     -->  Get the second (0-59)
+            getMilliseconds()	 -->  Get the millisecond (0-999)
+            getTime()	         -->  Get the time (milliseconds since January 1, 1970)
+            getDay()	         -->  Get the weekday as a number (0-6)
+            Date.now()	         -->  Get the time. ECMAScript 5.
+
+            <p id="demo" style="padding: 5px;font-weight: 600; border: 3px solid red;border-radius: 10px;width: 50vw;height: 40px;text-align: center;"></p>
+            <button style="padding: 10px;" onclick="funcFullYear()">Full Year</button>
+            <button style="padding: 10px;" onclick="funcMonth()">Month</button>
+            <button style="padding: 10px;" onclick="funcDate()">Date</button>
+            <button style="padding: 10px;" onclick="funcDay()">Day</button>
+            <button style="padding: 10px;" onclick="funcHours()">Hour</button>
+            <button style="padding: 10px;" onclick="funcMinutes()">Minutes</button>
+            <button style="padding: 10px;" onclick="funcSeconds()">Seconds</button>
+            <button style="padding: 10px;" onclick="funcMilliseconds()">Milliseconds</button>
+            <button style="padding: 10px;" onclick="funcTime()">Time</button>
+            <button style="padding: 10px;" onclick="funcNow()">Now</button>
+
+            <script>
+                function funcFullYear(){
+                    document.getElementById("demo").innerHTML = d.getFullYear();
+                }
+                function funcMonth(){
+                    document.getElementById("demo").innerHTML = d.getMonth();
+                }
+                function funcDate(){
+                    document.getElementById("demo").innerHTML = d.getDate();
+                }
+                function funcDay(){
+                    document.getElementById("demo").innerHTML = d.getDay();
+                }
+                function funcHours(){
+                    document.getElementById("demo").innerHTML = d.getHours();
+                }
+                function funcMinutes(){
+                    document.getElementById("demo").innerHTML = d.getMinutes();
+                }
+                function funcSeconds(){
+                    document.getElementById("demo").innerHTML = d.getSeconds();
+                }
+                function funcMilliseconds(){
+                    document.getElementById("demo").innerHTML = d.getMilliseconds();
+                }
+                function funcTime() {
+                    document.getElementById("demo").innerHTML = d.getTime();
+                }
+                function funcNow(){
+                    document.getElementById("demo").innerHTML = Date.now();
+                }
+            </script>
+        </p>
+    </div>
+
+    <div class="set date methods">
+        <p>
+            setDate()	        -->  Set the day as a number (1-31)
+            setFullYear()   	-->  Set the year (optionally month and day)
+            setHours()      	-->  Set the hour (0-23)
+            setMilliseconds()	-->  Set the milliseconds (0-999)
+            setMinutes()    	-->  Set the minutes (0-59)
+            setMonth()      	-->  Set the month (0-11)
+            setSeconds()    	-->  Set the seconds (0-59)
+            setTime()	        -->  Set the time (milliseconds since January 1, 1970)
+
+            <p id="set-date" style="padding: 5px;font-weight: 600; border: 3px solid red;border-radius: 10px;width: 50vw;height: 40px;text-align: center;"></p>
+            <button style="padding: 10px;" onclick="funcSetFullYear()">Full Year</button>
+            <button style="padding: 10px;" onclick="funcSetMonth()">Month</button>
+            <button style="padding: 10px;" onclick="funcSetDate()">Date</button>
+          
+            <script>
+                function funcSetFullYear(){
+                    d.setFullYear(2012);
+                    document.getElementById('set-date').innerHTML = d;
+                }
+                function funcSetMonth(){
+                    d.setMonth(2);
+                    document.getElementById('set-date').innerHTML = d;
+                }
+                function funcSetDate(){
+                    d.setDate(9);
+                    document.getElementById('set-date').innerHTML = d;
+                }
+            </script>
+        </p>
+    </div>
+</body>
+</html>

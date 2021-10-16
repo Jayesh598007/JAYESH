@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleans</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="booleans">
+        @ JS Boolean represents one of two values: true or false
+        <p>
+            <script>
+                // Boolean() function to find out if an expression is true
+                console.log(Boolean(10>8));         // returns true 
+                console.log(Boolean(10<8));         // returns false 
+            </script>
+
+            <script>
+                // Everything With a "Value" is True
+                console.log(Boolean(100));
+                console.log(Boolean(3.2));
+                console.log(Boolean('Hello'));
+                console.log(Boolean('false'));
+                console.log(Boolean(3+12+5.4));
+
+                // Everything Without a "Value" is False
+                console.log(Boolean(0));
+                console.log(Boolean(-0));
+                console.log(Boolean(""));
+                var x;
+                console.log(Boolean(x));
+                var x = false;
+                console.log(Boolean(x));
+                var x = null;
+                console.log(Boolean(x));
+            </script> 
+
+            <script>
+                var x = false;
+                console.log(typeof x);          // returns boolean
+
+                // Booleans Objects are NOT RECOMMENDED -- it slows down the operations
+                var x = new Boolean(false);
+                var y = new Boolean(false);
+                console.log(typeof y);          // returns object
+
+                // Objects cannot be compared here with Booleans
+                console.log(x == y);            // returns false
+            </script>
+        </p>
+    </div>
+</body>
+</html>

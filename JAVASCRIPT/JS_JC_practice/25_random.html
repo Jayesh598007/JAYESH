@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="random">
+        @ Math.random() returns a random number between 0 and 1
+        <p>
+            <p id="demo" style="border: 3px solid blue; height: 50px;border-radius: 10px;padding: 5px;text-align: center;"></p>
+            <button onclick="funcRandom1()">Random Number betn 0 ~ 1</button>
+            <button onclick="funcRandom2()">Random Number betn 0 ~ 10</button>
+            <button onclick="funcRandom3()">Random Number betn 0 ~ 100</button>
+            
+            <script>
+                function funcRandom1() {
+                    document.getElementById('demo').innerHTML = Math.random();
+                }
+                function funcRandom2() {
+                    document.getElementById('demo').innerHTML = Math.floor(Math.random()*11);
+                }
+                function funcRandom3() {
+                    document.getElementById('demo').innerHTML = Math.floor(Math.random()*101);
+                }
+            </script>
+        </p>
+
+        <p>
+            @ function returns a random number between min and max (both included)
+            <button onclick="document.getElementById('demo').innerHTML= ranInt(2,6)">Random Number betn 2 nums</button>
+            <script>
+                function ranInt(max, min) {
+                    return Math.floor(Math.random() * (max-min+1)) + min;
+                }
+            </script>
+        </p>
+    </div>
+</body>
+</html>

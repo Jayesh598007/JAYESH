@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Maths</title>
+    <link rel="shortcut icon" href="#" >
+</head>
+
+<body>
+    <div class="Maths Property">
+        @ Unlike other objects, Math object dont need to create object first
+
+        <p>
+            @ syntax for Math properties :   ' Math.property '        
+            Math.E              -->  returns Euler's number
+            Math.PI             -->  returns PI
+            Math.SQRT2          -->  returns the square root of 2
+            Math.SQRT1_2        -->  returns the square root of 1/2
+            Math.LN2            -->  returns the natural logarithm of 2
+            Math.LN10           -->  returns the natural logarithm of 10
+            Math.LOG2E          -->  returns base 2 logarithm of E
+            Math.LOG10E         -->  returns base 10 logarithm of E
+
+            <script>
+                console.log(Math.PI);
+                console.log(Math.SQRT2);
+                console.log(Math.LOG10E);
+            </script>
+        </p>
+    </div>
+    
+    <div class="Math Methods">
+        <p>     
+            @ syntax for Math methods :   ' Math.method.(number)  '
+            
+            <script>
+
+                // Math.round(x) Returns x rounded to its nearest integer
+                console.log(Math.round(4.9));       // returns 5
+                console.log(Math.round(4.4));       // returns 4
+                console.log(Math.round(-4.2));      // returns -4
+                
+                // Math.ceil(x) Returns x rounded 'UP' to its nearest integer
+                console.log(Math.ceil(4.7));        // returns 5
+                console.log(Math.ceil(4.4));        // returns 5
+                console.log(Math.ceil(-4.2));       // returns -4
+                
+                // Math.floor(x) Returns x rounded 'DOWN' to its nearest integer
+                console.log(Math.floor(4.9));       // returns 4
+                console.log(Math.floor(4.4));       // returns 4
+                console.log(Math.floor(-4.2));      // returns -5
+                
+                // Math.trunc(x) Returns the integer part of x
+                console.log(Math.trunc(4.9));       // returns 4
+                console.log(Math.trunc(4.4));       // returns 4
+                console.log(Math.trunc(-4.2));      // returns -4
+
+                // Math.sign(x) returns if x is negative, null or positive
+                console.log(Math.sign(4.4));        // returns 1
+                console.log(Math.sign(0));          // returns 0
+                console.log(Math.sign(-4.2));       // returns -1
+
+                // Math.pow(x, y) returns the value of x to the power of y
+                console.log(Math.pow(8,2));         // returns 64
+                console.log(Math.pow(5,3));         // returns 125
+
+                // Math.sqrt(x) returns the square root of x
+                console.log(Math.sqrt(64));         // returns 8
+
+                // Math.abs(x) returns the absolute (positive) value of x
+                console.log(Math.abs(-4.7));        //returns 4.7
+
+                // Math.sin(x) returns the sine
+                console.log(Math.sin((30*Math.PI/180)));
+
+                // Math.cos(x) returns the cosine
+                console.log(Math.cos((60*Math.PI/180)));
+
+                // Math.min(x) returns the sine
+                console.log(Math.min(0, 30, 50, -34, 98, -8));      // returns -34
+
+                // Math.max(x) returns the sine
+                console.log(Math.max(0, 30, 50, -34, 98, -8));      // returns 98
+
+                // Math.random() returns a random number between 0 and 1
+                console.log(Math.random());         // returns a random Number
+
+                // Math.log(x) returns the natural logarithm of x
+                console.log(Math.log(1));           // returns 0
+
+                // Math.log(x) returns the base 2 logarithm of x
+                console.log(Math.log2(8));          // returns 3
+
+                // Math.log(x) returns the base 10 logarithm of x
+                console.log(Math.log10(1000));      // returns 3
+
+            </script>
+        </p>
+    </div>
+    
+</body>
+</html>
