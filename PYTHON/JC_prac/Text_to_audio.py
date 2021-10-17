@@ -2,7 +2,9 @@
 
 import pyttsx3
 
-speak = pyttsx3.init()
-speak.say("savita nitin chaudhari saragkheda shirpur")
-speak.runAndWait()
+while True:
+    speak = pyttsx3.init()
+    speak.say("Oum Namaah Shivaay")
+    speak.runAndWait()
+
 
