@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,42 @@
     <title>Comparison and Logical Operators</title>
     <link rel="shortcut icon" href="#">
 </head>
+
 <body>
     <div class="comp">
         <p>
-            Hello India
-            
-            <script>
-                
-            </script>
+            @ Comparison Operator:
+            ' == '    # equal to
+            ' === '   # equal value and equal type
+            ' != '    # not equal
+            ' !== '   # not equal value or not equal type
+            ' > '     # greater than
+            ' < '     # less than
+            ' >= '    # greater than or equal to
+            ' <= '    # less than or equal to
         </p>
+        <hr>
+        <div>
+            <p>Mention Your Age Below</p>
+            <input id="age" value="18">
+            <button onclick="myFunc()">Click Here</button>
+            <p id="display"></p>
+
+            <script>
+                function myFunc() {
+                    let votable;
+                    let age = Number(document.getElementById('age').value);
+                    if (isNaN(age)) {
+                        votable = "Input is not a Number";
+                    }
+                    else{
+                        (age < 18) ? "too young" : "old Enough"
+                    }
+                    return document.getElementById('display').innerHTML = votable + " " + "To VOTE ";
+                }
+            </script>
+        </div>
     </div>
 </body>
+
 </html>
