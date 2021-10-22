@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+    <link rel="shortcut icon" href="#" >
+</head>
+<body>
+
+
+    <div class="loop">
+        @ Loops can execute a block of code a number of times
+        Kind of Loops:
+        for -       loops through a block of code a number of times
+        for/in -    loops through the properties of an object
+        for/of -    loops through the values of an iterable object
+        while -     loops through a block of code while a specified condition is true
+        do/while -  also loops through a block of code while a specified condition is true
+ 
+    </div>
+
+
+
+
+    <div class="for">    
+        <p> 
+            @ For - loops through a block of code a number of times
+
+            Syntax:
+            for (statement 1; statement 2; statement 3) {
+                // code block to be executed
+            }
+            
+            statement 1 is executed (one time) before code block execution
+            statement 2 defines condition for code block
+            statement 3 is executed (every time) after code block executed
+
+            <p id="text1" style="border:3px solid blue;text-align: center;"></p>
+            <script>
+                var text = '';
+                for (let i =0; i<5; i++){
+                    text += "The Number is " + i + "<br>";
+                }
+                document.getElementById('text1').innerHTML = text;
+            </script>
+        </p>
+
+        </p>
+            @ For in - loops through the 'properties' of an Object
+
+            Syntax :
+            for (key in object) {
+                // code block to be executed
+            }
+
+            <p id="text2" style="border:3px solid blue;text-align: center;"></p>
+            <script>
+                // 'for in' over objects
+
+                const person = {fname: "jayesh", lname: "chaudhari", age: 24};
+                var text = "";
+                for (let x in person){
+                    text += person[x] +' ';
+                }
+                document.getElementById('text2').innerHTML = text
+            </script>
+
+            <p id="text3" style="border:3px solid blue;text-align: center;"></p>
+            <script>
+                // 'for in' over arrays
+
+                const number = [45, 43, 12, 4, 18, 60];
+                var text = "";
+                for (let x in number){
+                    text += number[x];
+                }
+                document.getElementById('text3').innerHTML = text;
+            </script>
+        </p>
+
+        <p>
+            @ For of - statement loops through the 'values' of an iterable object
+            
+            Snytax:
+            for (variable of iterable) {
+                // code block to be executed
+            }
+            
+            <p id="text4" style="border:3px solid blue;text-align: center;"></p>
+            <script>
+                // 'for of' over strings 
+                let language = "Javascript";
+                var text = "";
+                for (x of language){
+                    text += x;
+                }
+                document.getElementById('text4').innerHTML = text;
+            </script> 
+
+            <p id="text5" style="border:3px solid blue;text-align: center;"></p>
+            <script>
+                // 'for of' over arrays
+                let fruit = ["apple", "mango", "kiwi"];
+                var text = "";
+                for (x of fruit){
+                    text += x + "<br>";
+                }
+                document.getElementById('text5').innerHTML = text;
+            </script>    
+        </p>
+    </div>
+    
+
+
+
+    <div class="while">
+        <p>
+            @ while - loop loops through a block of code as long as a specified condition is true
+            
+            Syntax:
+            while (condition) {
+                // code block to be executed
+            }
+            
+            <p id="text6" style="border:3px solid blue;text-align: center;"></p>
+            <script>
+                var text = "";
+                var i=1;
+                while(i<=10){
+                    text += "The Number is " + i + "<br>";
+                    i++;
+                }
+                document.getElementById('text6').innerHTML = text;
+            </script>
+        </p>
+
+        <p>
+            @ do while -  loop will always be executed at least once,
+                even if the condition is false, because the 
+                code block is executed before the condition is tested
+
+            Syntax:
+            do {
+                // code block to be executed
+            }
+            while (condition);
+
+            <p id="text7" style="border:3px solid blue;text-align: center;"></p>
+            <script>
+                var text = " ";
+                var i = 1;
+                do{
+                    text += "The Number is " + i + "<br>";
+                    i++;
+                }
+                while(i<=10);
+                document.getElementById('text7').innerHTML = text;
+            </script>
+        </p>
+    </div>
+
+    <div class="example">
+        # Similar output using for and while loop
+
+        <p id="for" style="width: 20vw; border: 5px solid blue;"></p>
+        <button onclick="funcFor()">Click For</button>
+        <p id="while" style="width: 20vw; border: 5px solid red"></p>
+        <button onclick="funcWhile()">Click While</button>
+
+        <script>
+            const car = ["volvo", "nano", "fortuner", "harrier", "nexon"]
+            var text = "";
+            var i = 0;
+
+            function funcFor() {
+                for(; car[i];){
+                    text += car[i] + "<br>";
+                    i++;
+                }
+                document.getElementById('for').innerHTML = text;
+            }
+            
+            function funcWhile() {
+                while(car[i]){
+                    text += car[i] + "<br>";
+                    i++;
+                }
+                document.getElementById('while').innerHTML = text;
+            }
+        </script>
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this Keyword</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div>
+        @ 'this' keyword refers to the object it belongs to
+
+        # this in a object method: 
+        <script>
+            const person = {
+                fname: "Jayesh",
+                lname: "Chaudhari",
+                age: 23,
+                id: "71842332B",
+                fullName: function(){
+                    return this.fname + " " + this.lname;
+                }
+            };
+            console.log(person.fullName());
+        </script>
+
+        # this in a event handler: 
+        <button style="padding: 5px;margin: 15px;" onclick="this.style.background= 'teal'; this.style.color= 'white'">
+            Click to change color!
+        </button>
+
+        # this in Explicit function binding:  
+            ie, call() and apply()
+        <script>
+            const man1= {
+                fullName: function(){
+                    return this.fname + " " + this.lname;
+                }
+            }
+            const person1 = {
+                fname: "Dhanu",
+                lname: "Patil",
+            }
+            console.log(man1.fullName.call(person1));  // will return Dhanu Patil
+            console.log(man1.fullName.call(person));   // will return Jayesh Chaudhari
+        </script>
+    </div>
+</body>
+</html>

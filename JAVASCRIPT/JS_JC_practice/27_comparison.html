@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="comp">
+    <div class="comparison">
         <p>
             @ Comparison Operator:
             ' == '    # equal to
@@ -25,7 +25,7 @@
         <hr>
         <div>
             <p>Mention Your Age Below</p>
-            <input id="age" value="18">
+            <input id="age" value="18" />
             <button onclick="myFunc()">Click Here</button>
             <p id="display"></p>
 
@@ -37,9 +37,9 @@
                         votable = "Input is not a Number";
                     }
                     else{
-                        (age < 18) ? "too young" : "old Enough"
+                        votable = (age < 18) ? "Too young" : "Old Enough";
                     }
-                    return document.getElementById('display').innerHTML = votable + " " + "To VOTE ";
+                    return document.getElementById('display').innerHTML = votable +  " To VOTE ";
                 }
             </script>
         </div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="scope">
+        @ Block determines the accessibility of the variables
+            >> Block scope
+            >> Function scope
+            >> Global scope
+
+        <script>
+            var x = 46;
+            console.log(x);         // global scope
+
+            {
+                let x = 5;
+                console.log(x);         // block scope
+            }
+            console.log(x);         // global scope
+
+            function newFunc() {
+                const x = "jayesh";
+                return console.log(x);      // function scope
+            }
+            console.log(x);         // global scope
+            newFunc();
+        </script>
+    </div>
+    <div>
+        @ The Lifetime of JS variables starts when it is declared
+            >> function variables are deleted when the function is completed
+            >> global variables are deleted when the browser window is closed
+    </div>
+</body>
+</html>

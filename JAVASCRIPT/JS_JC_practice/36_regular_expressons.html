@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div>
+        @ Regular expression is a sequence of characters that forms a search pattern
+
+        Syntax:
+        /pattern/modifiers;
+        Example:  /hello/i;
+            >> 'hello' is a pattern (to be searched)
+            >>  'i' is a modifier( for case-insensitive)
+    
+        <p>
+            search() method searches a string for a specified value and returns the position of the match
+            <script>
+                var text = "hello World!";
+
+                // search() with a string
+                let n = text.search('World');
+                console.log(n);         // returns 6 (ie, position of the word)
+
+                // search() with a regular expression
+                let m = text.search(/world/i);
+                console.log(m);         // returns 6 (position of the word)
+            </script>
+        </p>
+
+        <p>
+            replace() method replaces a specified value with another value in a string
+            <script>
+                var text = "Google is a nice company";
+
+                // replace() using string
+                let x = text.replace("Google", "Instagram");
+                console.log(x);         // returns new modified String
+
+                // replace() using regular expression
+                let y = text.replace(/google/i, "Facebook");
+                console.log(y);         // returns new modified string
+            </script>
+        </p>
+
+        <p>
+            @ Regular Expressions Modifiers:
+                i	    >>  Perform case-insensitive matching	
+                g	    >>  Perform a global match (find all matches rather than stopping after the first match)	
+                m	    >>  Perform multiline matching
+
+            @ Regular Expressions patterns:
+              [abc]	    >>  Find any of the characters between the brackets	
+              [0-9]	    >>  Find any of the digits between the brackets	
+              (x|y)	    >>  Find any of the alternatives separated with
+
+            @ Quantifiers:
+                n+	    >>  Matches any string that contains at least one n
+                n*	    >>  Matches any string that contains zero or more occurrences of n
+                n?	    >>  Matches any string that contains zero or one occurrences of n
+
+        </p>
+
+        <p>
+            test() method searches a string for a pattern, and return 'true' or 'false'
+            <script>
+                var line = /e/;
+                console.log(line.test("The best thing in life are Free!"));
+            </script>
+            <hr>
+
+            exec() method searches a string for a pattern, and return found text
+            <p id="demo"></p>
+            <script>
+                var text = /o/.exec("honesty is the best policy");
+                document.getElementById('demo').innerHTML = "Found '" + text[0] + "' in position '" + text.index + "' in sentence: " + text.input;
+            </script>
+        </p>
+
+    </div>
+</body>
+
+</html>

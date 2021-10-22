@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="declarations">
+        @ Hoisting is JS behaviour of moving all declaration to the top
+
+        <p>
+            >> In JS, variables can be used before it has been declared
+            <script>
+                x = 5;          // assign 5 to x     
+                console.log(x);
+                var x;          // declare x
+            </script>
+        </p>
+
+        <p>
+            >> In JS, only declarations are hoisted at the top, not the initializations(values)      
+            <script>
+                var x = 12;        // initialize y
+                console.log(x+y);       
+                var y = 56;        // initialize y
+            </script>
+        </p>
+    </div>
+</body>
+</html>

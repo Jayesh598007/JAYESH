@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterables</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="iterables">
+        @ Iterating simply means looping over a sequence of elements
+        <p>
+            >> Iterating over a string
+            <script>
+                const name = "jayesh";
+                var text = "";
+                for (x of name){
+                    text += x +" "; 
+                }
+                console.log(text);    
+            </script>
+        </p>
+        
+        <p>
+            >> Iterating over an array
+            <script>
+                const list = ["car","truck","bike"];
+                var text = "";
+                for (x of list){
+                    text += x + "  ";
+                }
+                console.log(text);    
+            </script>
+        </p>
+        
+        <p>
+            >> Iterating over a Map
+            Map(): An Array (other iterable object) whose elements are key-value pairs 
+            <script>
+                var text = "";
+                const fruits = new Map([
+                    ["kiwi",23],
+                    ["mango", 45],
+                    ["apple", 12],
+                    ["orange", 34]
+                ]);
+                fruits.set("kiwi", 78);     // setting new value to a key
+
+                for (x of fruits){
+                    text += x + " || ";
+                }
+                console.log(text);    
+            </script>
+        </p>
+    </div>
+</body>
+</html> 

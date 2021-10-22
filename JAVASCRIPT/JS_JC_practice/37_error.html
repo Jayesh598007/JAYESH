@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Errors</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div class="errors">
+        <p>
+            @ 'try' statement lets you test a block of code for errors
+            @ 'catch' statement lets you handle the error, if error occurs
+                >> 'try' and 'catch' comes in pairs
+
+            Syntax:
+                try {
+                    Block of code to try
+                 }
+                catch(err) {
+                    Block of code to handle errors
+                }
+
+            <p id="demo"></p>
+            <script>
+                try {
+                    addlert('Hello Jayesh!');     // error 
+                }
+                catch (err) {
+                    document.getElementById('demo').innerHTML = err.message;
+                    // it catches the error
+                }
+            </script>
+        </p>
+
+        <p>
+            @ 'throw' allows us to create custom errors in form of String, number, boolean or object.
+            <button onclick="newError()"> Throw error</button>
+            <script>
+                function newError() {
+                    throw ('Parameter is not correct');
+                }
+            </script>
+        </p>
+        
+        <p>
+            @ 'finally' statement lets you execute code, after try and catch, regardless of the result
+
+            Syntax:
+                try {
+                    Block of code to try
+                }
+                catch(err) {
+                    Block of code to handle errors
+                }
+                finally {
+                    Block of code to be executed regardless of the try / catch result
+                }
+            
+            <input type="text" id="num">
+            <button onclick="myFunc()">Click Here</button>
+            <p id="temp"></p>
+            <script>
+                const msg = document.getElementById('temp');
+                msg.innerHTML = " ";
+                var x = document.getElementById('num').value;
+                function myFunc() {      
+                    try {
+                        if (x=="") throw 'invalid input';
+                        if (x<5) throw "too low";
+                        if (x>15) throw "too high";
+                        if (5<x && x<10) throw "keep high";
+                        if (10<x && x<15) throw "keep low";
+                        if (x==10) throw "Perfect";
+                    }
+                    catch(err) {
+                        msg.innerHTML = err;
+                    }
+                    finally{
+                        alert("you have learnt the code");
+                    }
+                }
+            </script>
+        </p>
+    </div>
+
+</body>
+</html>

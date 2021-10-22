@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Strict</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div>
+
+        >>  Purpose of "use strict" is to indicate that the code should be executed in "strict mode"
+        >>  With strict mode, you can not use undeclared variables
+        >>  Strict mode makes it easier to write "secure" JavaScript
+
+        <p>
+            >> "use strict";  is declared at the beginning of a script
+            <script>
+                "use strict";
+                x = 35;
+                console.log(x)        // causes error coz x is not declared 
+            </script>
+        </p>
+
+        <p>
+            >> Declared inside a function, it has local scope
+            <script>
+                x = 5;
+                console.log(x);         // doesn't cause the error
+                
+                function sum(){
+                    "use strict";       // function scope
+                    y = 325;
+                    console.log(y);
+                }
+                sum();
+            </script>
+        </p>
+    </div>
+</body>
+</html>

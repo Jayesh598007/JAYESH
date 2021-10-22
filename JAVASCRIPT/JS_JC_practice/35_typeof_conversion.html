@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typeof conversion</title>
+    <link rel="shortcut icon" href="#" >
+</head>
+<body>
+    <div class="conversion">
+        <p>
+            <script>
+                // Converting Strings to Numbers
+                console.log(Number("3.14"));              // returns 3.14
+                console.log(Number(" "));                 // returns 0
+                console.log(Number("36"));                // returns 36
+                console.log(parseInt("5.223"));           // returns 5
+                console.log(parseFloat("5.223"));         // returns 5.223
+
+                // Converting Numbers to Strings
+                console.log(String(34));            // returns 34 
+                console.log(String(100+24));        // returns 124
+                console.log((98).toString());       // returns 98
+                
+                // Converting Dates to Numbers
+                let d = new Date();
+                console.log(d);                     // returns date
+                console.log(Number(d));             // returns date in number
+                
+                // Converting Dates to strings
+                console.log(Date().toString());     // returns date as string
+                console.log(String(Date()));        // returns date as string     
+                
+                // Converting Booleans to Numbers
+                console.log(Number(true));          // returns 1
+                console.log(Number(false));         // returns 0
+
+                // Converting Numbers to Booleans
+                console.log(Boolean(1));            // returns true
+                console.log(Boolean(0));            // returns false
+
+
+                console.log();
+                console.log();
+                console.log();
+                
+
+
+
+            </script>
+        </p>
+    </div>
+</body>
+</html>

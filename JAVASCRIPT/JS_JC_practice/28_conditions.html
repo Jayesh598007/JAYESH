@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condition</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="if-else conditions">
+        <p>
+            'if' condn          # executes if a condition is true
+            'else' condn        # executes if a condition is false
+            'else if' condn     # executes if a new condition if first condition is false
+            <hr>
+            <button onclick="timeNow()">Click here</button>
+            <p id="hour" style="border: 3px solid red; text-align: center;border-radius:10px; height: 40px;"></p>
+
+            <script>
+                const time = new Date().getHours();
+                if (time < 10){
+                    greeting = "Good Morning";
+                }
+                else if(time < 18){
+                    greeting = "Good AfterNoon";
+                }
+                else {
+                    greeting = "Good Evening";
+                }
+                function timeNow() {
+                    document.getElementById('hour').style.fontSize = 'x-large';
+                    return document.getElementById('hour').innerHTML = greeting;
+                }
+            </script>
+        </p>
+    </div>
+
+    <div class="switch conditions">
+        <p>
+            @ 'switch' statement is used to perform different actions based on different conditions
+            @ 'break' keyword, breaks out of the switch block
+            <hr>
+            <button onclick="dayNow()">Click here</button>
+            <p id="day" style="border: 3px solid red; text-align: center;border-radius:10px; height: 40px;"></p>
+
+            <script>
+                let day;
+                switch (new Date().getDay()) {
+                    case 0:
+                        day = "Sunday";
+                        break;
+                    case 1:
+                        day = "Monday";
+                        break;
+                    case 2:
+                        day = "Tuesday";
+                        break;
+                    case 3:
+                        day = "Wednesday";
+                        break;
+                    case 4:
+                        day = "Thursday";
+                        break;
+                    case 5:
+                        day = "Friday";
+                        break;
+                    case 6:
+                        day = "Saturday";
+                        break;
+                }
+                function dayNow() {
+                    document.getElementById('day').innerHTML = "Today is " + day;
+                } 
+            </script>
+        </p>
+
+        <p>
+            @ 'default' keyword specifies the code to run if there is no case match
+            <hr>
+            <button onclick="getDayNow()">Click here</button>
+            <p id="Today" style="border: 3px solid red; text-align: center;border-radius:10px; height: 40px;"></p>
+
+            <script>
+                let today;
+                switch (new Date().getDay()) {
+                    case 6:
+                        today = "Today is Saturday";
+                        break;
+                    case 0:
+                        today = "Today is Sunday";
+                        break;
+                    default:
+                        today = "Looking forward towards the Weekend";
+                }
+                function getDayNow() {
+                    document.getElementById('Today').innerHTML =  today;
+                } 
+            </script>
+        </p>
+
+        <p>
+            Common Code Blocks
+            <hr>
+            <button onclick="myFunc()">Click here</button>
+            <p id="name" style="border: 3px solid red; text-align: center;border-radius:10px; height: 40px;"></p>
+
+            <script>
+                let text;
+                switch (new Date().getDay()) {
+                    case 4:
+                    case 5:
+                        text = "Soon it is Weekend";
+                        break;
+                    case 0:
+                    case 6:
+                        text = "It is Weekend";
+                        break;
+                    default:
+                        text = "Looking forward to the Weekend";
+                }
+                function myFunc() {
+                    document.getElementById('name').innerHTML = text;
+                }
+            </script>
+        </p>
+    </div>
+</body>
+</html>
