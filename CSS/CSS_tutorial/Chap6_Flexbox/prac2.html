@@ -1,0 +1,69 @@
+<!-- create a layout of parctice 1s using flexbox  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: brown;
+            color: yellow;
+        }
+
+        ul {
+            padding: 10px;
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+            padding: 10px;
+            font-size: 3vw;
+        }
+
+        .box{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left {
+            background-color: turquoise;
+            height: 80px;
+            width: 30vw;       
+        }
+
+        .right {
+            background-color: tomato;
+            height: 80px;
+            width: 30vw;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="box">
+        <div class="left">I am Left</div>
+        <div class="right">I am Right</div>
+    </div>
+</body>
+
+</html>

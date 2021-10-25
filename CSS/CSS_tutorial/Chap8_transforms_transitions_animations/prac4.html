@@ -1,0 +1,86 @@
+<!-- create a slider with 3 images using CSS  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .slider {
+            background-color: aquamarine;
+            height: 100vh;
+            width: 100vw;
+            margin: auto;
+            /* ^^for equal margin on both sides */
+            overflow: hidden;
+            /* ^^to put the img within the item(w.r.t height and width)  */
+            display: flex;
+            justify-content: center;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+            height: 80vh;
+            /* ^^the img in item with equal margin on both sides  */
+        }
+
+        .one {
+            transform: translateX(-4vw);
+            animation: slide1 3s linear 1s infinite;
+        }
+
+        .two {
+            transform: translateX(0vw);
+            animation: slide2 3s linear 1s infinite;
+        }
+
+        .three {
+            transform: translateX(4vw);
+            animation: slide3 3s linear 1s infinite;
+        }
+
+        @keyframes slide1 {
+            from{
+                transform: translateX(-4vw);
+            }
+            to{
+                transform: translateX(92vw);
+            }
+        }
+        @keyframes slide2 {
+            from{
+                transform: translateX(0vw);
+            }
+            to{
+                transform: translateX(96vw);
+            }
+        }
+        @keyframes slide3 {
+            from{
+                transform: translateX(4vw);
+            }
+            to{
+                transform: translateX(100vw);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <img class="one" src="kiwi.png" alt="error">
+        <img class="two" src="strawberry.png" alt="error">
+        <img class="three" src="apple.png" alt="error">
+    </div>
+</body>
+
+</html>

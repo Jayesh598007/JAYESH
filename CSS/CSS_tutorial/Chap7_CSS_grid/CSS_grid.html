@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <!-- 'grid' is a set of intersecting horizontal and vertical lines defining columns and rows  -->
+    <!-- CSS Grid Layout introduces a two-dimensional grid system to CSS  -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background-color: cornsilk;
+            height: 80vh;
+            display: grid;
+            /* ^^proprty used to enable grid layout  */
+            grid-row-gap: 5px;
+            grid-column-gap: 10px;
+            /* ^^property to introduce gap betn two grid (rows, columns) */
+            grid-gap: 10px 10px;
+            /* ^^shorhand property to introduce gap betn two grid (rows, columns) */
+            grid-template-columns: 10vw 20vw 1fr;
+            grid-template-columns: 10vw 20vw 15vw 1fr ;
+            /* ^^property specifies width of grid boxes (columns)  */
+            grid-template-rows: 20vh 30vh 25vh;
+            /* ^^property specifies height of grid boxes (rows)  */
+            justify-content: center;
+            /* ^^property used to align the grid horizontally */
+            align-content: center;
+            /* ^^property used to align the grid vertically */
+        }
+
+        .item {
+            background-color: palevioletred;
+            border: 2px solid teal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="item">One</div>
+        <div class="item">Two</div>
+        <div class="item">Three</div>
+        <div class="item">Four</div>
+        <div class="item">Five</div>
+        <div class="item">Six</div>
+        <div class="item">Seven</div>
+        <div class="item">Eight</div>
+        <div class="item">Nine</div>
+    </div>
+</body>
+
+</html>

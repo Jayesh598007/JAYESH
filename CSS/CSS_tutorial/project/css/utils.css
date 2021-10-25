@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.flex-all-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-all-center img{
+    padding: 0px 20px;
+}
+.heading{
+    padding: 0px 15px;
+    color: darkslateblue;
+    font-family: 'Teko', cursive;
+}
+
+.btn{
+    margin: 5px;
+    padding: 3px;
+    border: none;
+    background-color: white;
+}

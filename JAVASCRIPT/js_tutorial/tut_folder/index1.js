@@ -40,8 +40,8 @@ var b = false;
 console.log(a, b);
 
 // null and undefined
-var und; // this is bydefault undefined
-var n = null; // this is null(void)
+var und;        // this is bydefault undefined
+var n = null;   // this is null(void)
 console.log(und);
 console.log(n);
 

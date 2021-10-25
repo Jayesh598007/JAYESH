@@ -1,0 +1,16 @@
+*{
+    margin: 5px;  /* gap betn screen edges and element bg*/
+    padding: 10px;  /* gap betn element bg and paragraph/font */
+}
+/* above values are added by 'm0+p0' and enter */
+
+.red{
+    background: red;  /* bg color */
+    height: 100px;    /* height of the element */
+    color: white; /* font color */
+}
+
+.green{
+    background-color: #31cf1c;
+    color: aqua;
+}

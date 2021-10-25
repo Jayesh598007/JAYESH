@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Properties</title>
+    <style>
+        main {
+            background-color: burlywood;
+            width: 120px;
+            height: 300px;
+        }
+
+        /* 'text-align' - used to set the horizontal alignment */
+        .box {
+            text-align: center;
+            background-color: coral;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        /* 'text decoration' - this shorthand property is used to decorate a text (color/line/style/thickness) */
+        .p1 {
+            text-decoration: dashed underline;
+        }
+
+        .p2 {
+            text-decoration: underline overline red;
+        }
+
+        .p3 {
+            text-decoration: wavy underline greenyellow;
+        }
+
+        .p4 {
+            text-decoration: solid line-through 1px black;
+            /* ^^^ this is a shorthand for (style/line/thickness/color) */
+        }
+
+        /* 'text transform' - used to specify the uppercase and lowercase letters in a text  */
+        .b1 {
+            text-transform: capitalize;
+        }
+
+        .b2 {
+            text-transform: uppercase;
+        }
+
+        .b3 {
+            text-transform: lowercase;
+        }
+
+        .b4 {
+            text-transform: none;
+        }
+
+        .b5{
+            text-transform: full-width uppercase ;
+        }
+
+        /* 'line-height' - this property is used to speciy space btn two lines */
+        .top{
+            line-height: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, non?
+    </div>
+    <main>
+        <div class="p1">Lorem, ipsum dolor.</div> <br>
+        <div class="p2">Lorem ipsum dolor sit.</div> <br>
+        <div class="p3">Lorem, ipsum dolor.</div> <br>
+        <div class="p4"> A Mechanical Engineer</div>
+    </main>
+    <br>
+    <main>
+        <div class="b1">Lorem, ipsum dolor.</div>
+        <div class="b2">Lorem, ipsum dolor.</div>
+        <div class="b3">Lorem, ipsum dolor.</div>
+        <div class="b4">Lorem, ipsum dolor.</div>
+        <div class="b5">Lorem, ipsum dolor.</div>
+    </main>
+    <br>
+    <div class="top">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, temporibus!
+    </div>
+</body>
+
+</html>

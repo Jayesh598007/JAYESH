@@ -1,0 +1,75 @@
+<!-- create a layout of flexbox using grid   -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: grid;
+            background-color: salmon;
+        }
+
+        ul {
+            padding: 10px;
+            display: inline-grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        li {
+            list-style: none;
+            padding: 5px 5px;
+            font-size: 2vw;
+        }
+
+        .box {
+            grid-template-columns: auto auto;
+            grid-gap: 10px;
+            display: inline-grid;
+            /* background-color:cornsilk; */
+            height: 20vh;
+            width: 100vw;
+            justify-content: space-between;
+        }
+
+        .left {
+            padding: 20px;
+            width: 30vw;
+            background-color: violet;
+        }
+
+        .right {
+            padding: 20px;
+            width: 30vw;
+            background-color: turquoise;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="box">
+        <div class="left">I am Left</div>
+        <div class="right">I am Right</div>
+    </div>
+</body>
+
+</html>

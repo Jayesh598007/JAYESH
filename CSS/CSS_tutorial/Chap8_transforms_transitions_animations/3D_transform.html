@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform 3D</title>
+    <!-- here we will look upto 3D transform ie; rotate( in all X, Y, Z directions) -->
+    <style>
+        * {
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .jpg {
+            transform: rotateX(240deg) rotateZ(40deg) rotateY(20deg);
+        }
+
+        .png {
+            transform: rotateX(230deg);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="apple.jpg" alt="error" class="jpg" height="300px" width="250px">
+    <img src="apple.png" alt="error" class="png" height="300px" width="250px">
+</body>
+
+</html>

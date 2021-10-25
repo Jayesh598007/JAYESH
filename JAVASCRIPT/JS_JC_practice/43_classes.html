@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+    <link rel="shortcut icon" href="#" >
+</head>
+<body>
+    <div>
+        @ JS classes are templates for JS objects, it itself is NOT an object
+
+        >> Use the keyword class to create a class
+        >> Always add a method named constructor()
+        
+        Syntax:
+        class ClassName {
+            constructor() { ... }
+        }
+        <p>
+            # creating a class 
+            <script>
+                class car{
+                    constructor(name, year){        // class properties
+                        this.name = name;
+                        this.year = year;
+                    }
+                }
+                console.log(typeof car);            // typeof function 
+            </script>
+        </p>
+        
+        <p>   
+            # car class used to create two car objects
+            <script>
+                
+                let car1 = new car("Volvo", 2004);      // car1 objects
+                let car2 = new car("Creta", 2017);      // car2 objects
+                
+                console.log(car1.name);                 // returns object values
+                console.log(car1);                      // returns objects 
+                console.log((car2.year).toString());    // returns object values (in string form)
+            </script>
+        </p>
+        
+        <p>
+            # add any number of methods
+            <script>
+                class student{          // always to be added
+                    constructor(name, year, id){
+                        this.name = name;
+                        this.year = year;
+                        this.id = id;
+                    }
+                    age(){              // new method
+                        let date = new Date();
+                        return date.getFullYear() - this.year;
+                    }
+                    details(){
+                        return "Student named '"+ this.name + "' is '" + this.age() + "' years old";
+                    }
+                }
+                
+                let jayesh = new student("Jayesh", 1998, "71832332B");
+                let mahesh = new student("Mahesh", 1998, "72964125A");
+                let kartik = new student("Kartik", 1997, "71831762C");
+
+                console.log(jayesh.age());           // get method age
+                console.log(kartik.name);            // get name
+                console.log(mahesh.id);              // get id
+
+                console.log(kartik.details())        // get method details 
+            </script>
+        </p>
+    </div>
+    
+</body>
+</html>

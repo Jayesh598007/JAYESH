@@ -1,0 +1,38 @@
+@media screen and (max-width: 1000px){
+    body{
+        background-color:thistle;
+    }
+    nav{
+        flex-direction: column;
+    }
+    .logo{
+        justify-content: center;
+        margin: 12px 0;
+    }
+    nav ul{
+        height: 3vh;
+        justify-content: center;
+    }
+    nav ul a{
+        font-size: 2.5vw;
+        padding: 0 20px;
+    }
+    ul a:hover{
+        font-size: 3vw;
+    }
+    ul a img{
+        width: 3vw;
+    }
+    ul a img:hover{
+        width: 4vw;
+    }
+    .search{
+       margin: 5px auto;
+    }
+    .login{
+        margin: 5px auto;
+    }
+    .card-items img{
+        width: 130px;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Selectors</title>
+    <style>
+        /* element selectors */
+        h1 {
+            color: rgb(236, 233, 22);
+            text-decoration-color: teal;
+        }
+
+        div {
+            background-color: rgb(218, 100, 165);
+            color: skyblue;
+        }
+
+        /* id selector */
+        h3, #red{
+            background-color: sandybrown;
+            color: brown;
+            border: 2px solid black;
+        } 
+ 
+        /* class selector */
+        .red {
+            background-color: springgreen;
+            color: tomato;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1> element without any id and class name </h1> <!-- This is a h1 element (without any id and class) -->
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero corporis placeat voluptate dolor esse nostrum
+            sit, nesciunt saepe, quis blanditiis molestiae iste impedit ducimus iusto molestias natus, tenetur
+            aspernatur repudiandae! A expedita rerum quis architector
+        </p>
+        <h1>this is the another heading</h1> <!-- to similar tags without any specified name, CSS applies to both -->
+    </div>
+
+    <div id="red"> element with id name </div>
+
+    <div class="red"> element with class name </div>
+    <h3>i am h3</h3>
+</body>
+
+</html>

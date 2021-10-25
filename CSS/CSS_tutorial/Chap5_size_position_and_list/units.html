@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>units for font sizes</title>
+    <style>
+        .contain {
+            font-size: 30px;
+        }
+
+        .p1 {
+            /* size 'px'- mentioned below (20px) */
+            font-size: 20px;
+        }
+
+        .p2 {
+            /* size 'em'- size of the parent(div.contain) size(2*30px) */
+            font-size: 2em;
+        }
+
+        .p3 {
+            /* size 'rem'- size of the html(default) tag size (3*12px) */
+            font-size: 3rem;
+        }
+
+        .p4 {
+            /* size 'vh'- 50% height of the device screen(depend on the device) */
+            /* size 'vw'- 50% width of the device screen(depend on the device) */
+            height: 50vh;
+            width: 50vw;
+            background-color: coral;
+        }
+
+        .p5 {
+            /* size '%'- % of the parent element(70% of 30px) */
+            font-size: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contain">
+        <p>This is the parent element</p>
+        <hr>
+
+        <div class="p1">
+            This is the child element
+        </div>
+        <hr>
+        <div class="p2">
+            This is the child element
+        </div>
+        <hr>
+        <div class="p3">
+            This is the child element
+        </div>
+        <hr>
+        <div class="p4">
+            This is the child element
+        </div>
+        <hr>
+        <div class="p5">
+            This is the child element
+        </div>
+
+    </div>
+</body>
+
+</html>

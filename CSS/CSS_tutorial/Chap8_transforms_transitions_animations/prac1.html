@@ -1,0 +1,63 @@
+<!-- create a thin progress bar using animation for a website -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .bar {
+            width: 2vw;
+            height: .5vh;
+            background-color: red;
+            animation: progress 3s ease-in 1s 1 normal;
+        }
+
+        .box1 {
+            width: 100vw;
+            height: 24.5vh;
+            background-color: salmon;
+        }
+
+        .box2 {
+            width: 100vw;
+            height: 75vh;
+            background-color: skyblue;
+        }
+
+        @keyframes progress {
+            0% {
+                width: 2vh;
+            }
+
+            25% {
+                width: 40vh;
+            }
+            60% {
+                width: 50vh;
+            }
+            80% {
+                width: 80vh;
+            }
+            100%{
+                width: 100vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bar"></div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+
+</html>

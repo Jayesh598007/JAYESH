@@ -64,6 +64,7 @@ console.log(" S  P  A  C  E ");
 do {
     console.log(arr[j]);
     j ++; 
-}while(j < arr.length);
+}
+while(j < arr.length);
 */
 

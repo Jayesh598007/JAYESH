@@ -1,0 +1,117 @@
+<!-- Create a responsive navbar using relative lengths -->
+<!-- ceate a sticky navbar using positioning property  -->
+<!-- demonstrate the use of list-style property using a ul as example -->
+<!-- demonstate the use of z-index using an example  -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0;
+        }
+
+        header {
+            background-color: teal;
+            padding: 20px;
+        }
+
+        header li {
+            font-size: 3vw;
+            /* ^^responsive 'font size' changes as per the web page size changes with devices   */
+            display: inline-block;
+            padding: 3px;
+            /* ^^padding betn the lists  */
+        }
+
+        .nav {
+            background-color: darkmagenta;
+            color: yellowgreen;
+            text-align: center;
+            font-size: 2rem;
+            /* ^^responsive font size  */
+            height: 3rem;
+            /* ^^responsive element height  */
+            position: sticky;
+            top: 48px;
+        }
+
+        .body {
+            background-color: salmon;
+            height: 1000px;
+            /* ^^extra large height so that web should be scrollable  */
+            z-index: 1;
+            /* ^^adding z-index makes this element to overlap the previous element */
+            position: relative;
+            /* ^^element is removed from normal flow of document and other properties are added to it, ie; z-index */
+        }
+
+        .body h1 {
+            padding: 5px;
+            color: crimson;
+            font-weight: bolder;
+            font-size: 50px;
+            text-align: center;
+            text-transform: uppercase;
+            /* ^^text in uppercase  */
+        }
+
+        .body h2 {
+            color: black;
+            font-weight: bold;
+            font-size: 35px;
+            font-style: italic;
+            text-decoration: underline overline;
+            /* ^^upperline and underline to the text  */
+            text-align: center;
+            text-transform: capitalize;
+            /* ^^center alignment and capilalixe of words the text */
+        }
+
+        .body p {
+            color: black;
+            font-size: 20px;
+        }
+        body ul li{
+            padding: 5px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li>Home</li><li>About</li><li>Contact</li>
+        </ul>
+    </header>
+
+    <div class="nav">
+            Jayesh Chaudhari
+    </div>
+
+    <div class="body">
+        <h1> Hotel Paradise </h1>
+        <h2> Heaven on Earth</h2>
+        <br> <hr><br>
+        <p> Hello, We are Hotel Paradise. Its our pleasure you came here to meet us and visit our village.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique pariatur, aut esse fugiat assumenda, mollitia soluta quam aspernatur atque sapiente cumque voluptatibus blanditiis quae sint nam veritatis eos ipsum! Ipsum placeat dignissimos animi voluptas error dolores vel est excepturi corporis non, dolorum velit voluptatum, quibusdam consequuntur doloremque, inventore facere neque temporibus rerum minus eum repellat ex laboriosam? Voluptates nobis consequuntur quibusdam minima non doloremque et, nostrum nemo delectus maxime excepturi ad quae molestiae. Ratione dignissimos eligendi cum, temporibus animi adipisci corporis repudiandae aliquid saepe ut fugiat cumque enim numquam impedit amet, tenetur officiis itaque ipsum sapiente dolorum minus praesentium mollitia.</p>
+
+    </div>
+    <ul>
+        <li>Jayesh</li>
+        <li>Chaudhari</li>
+    </ul>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background_size</title>
+    <style>
+        body {
+            background-image: url('code.jpg');
+            height: 200px;
+            background-size: cover;
+            /* fits on whole webpage(element border) and no space remain(original image as it is)-> results in image break */
+            background-size: contain;
+            /* fits as per the aspect ratio of given height/width of element(image itself)-> results in empty element  */
+            background-size: auto;
+            /* fits with the original size*/
+            background-size: 200px 110px;
+            /* fits as per the (width,height) added in CSS > can result in faul of aspect ratio  */
+        }
+
+        .brown {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="brown">
+        <b>Hello, this is Jayesh</b>
+    </div>
+</body>
+
+</html>

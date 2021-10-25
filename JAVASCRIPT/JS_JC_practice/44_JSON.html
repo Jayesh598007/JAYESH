@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div>
+        @ JSON is a format for storing and transporting data
+        @ JSON is often used when data is sent from a server to a web page
+
+        <p>
+            >>  JSON stands for JavaScript Object Notation
+            >>  JSON is a lightweight data interchange format
+            >>  JSON is language independent(JSON data can be written in any programming language)
+            >>  JSON is easy to understand
+
+            Syntax:
+            {
+                "objectName":
+                {
+                    "name": "Jayesh",
+                    "age": 23,
+                    "car": "volvo",
+                    "dept": "Dev-ops"
+                }
+            }
+
+            # Syntax Rules:
+            >> data is in form of key:value pair
+            >> keys are quoted
+            >> values are quoted (if req)
+            >> data is separated in columns
+        </p>
+
+        @ JSON names require double quotes. JavaScript names do not
+
+        <script>
+            // JS object
+            let jsObj = {
+                name: "Jayesh",
+                car: "Volvo",
+                friend: "Kartik",
+                food: "Pani-Puri",
+            }
+            console.log(jsObj);
+            console.log(typeof jsObj);        // type - object
+
+
+            // converting a JS object into a JSON
+            let jsonStr = JSON.stringify(jsObj);
+            console.log(jsonStr);
+            console.log(typeof jsonStr);        // type - string
+
+
+            // replace a element
+            jsonStr = jsonStr.replace("Kartik", "Pratik");
+            console.log(jsonStr);
+
+
+            //converting back a JSON into a JS object
+            newObj = JSON.parse(jsonStr);
+            console.log(newObj);
+        </script>
+    </div>
+    
+</body>
+</html>

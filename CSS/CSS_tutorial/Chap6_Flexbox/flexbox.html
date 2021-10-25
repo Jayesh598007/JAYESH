@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        .container{
+            background-color: cadetblue;
+            height: 50vh;
+            display: flex;
+            /* 'display: flex' is declared for Flexible Box Model specification  */
+            flex-direction: column-reverse;
+            flex-direction: row;
+            /* ^^property sets how flex items are placed in flex container  */
+            flex-wrap: wrap;
+            /* ^^property sets to wrap flex items  */
+            justify-content: center;
+            /* ^^property used for alignment of items along main (X) axis  */
+            align-items: center;
+            /* ^^property used for alignment of items along cross (Y) axis */
+            /* align-content: center; */
+            /* ^^propety aligns a flex items in the flex container when there is extra space in the cross-axis */
+        }
+        .box1 {
+            background-color: red;
+            height: 110px;
+            width: 150px;
+            border: 2px solid black;
+            order: 4;
+            /* ^^property controls the order of the flex items to appear in flexbox( 0 is the bydefault) */
+            align-self: flex-end;
+            /* ^^property allows to align the item changing from bydefault */
+            flex-grow: 2;
+            /* ^^property defines ability for flex item to grow  */
+            flex-shrink: 3;   
+            /* ^^property specifies how much a flex item will shrink relative to rest of the flex items(it is dependant)  */
+        }
+
+        .box2 {
+            background-color: blue;
+            height: 110px;
+            width: 150px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">Box1</div>
+        <div class="box2">Box2a</div>
+        <div class="box2">Box2b</div>
+        <div class="box2">Box2c</ldiv>
+    </div>
+</body>
+
+</html>

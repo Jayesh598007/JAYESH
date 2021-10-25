@@ -1,0 +1,50 @@
+<!-- create a webpage with images with round border and border radius -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prcatice 4</title>
+    <style>
+        .box {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left {
+            height: 250px;
+            width: 30vw;  
+            border-radius: 40px;
+            /* ^^property to add border radius to images(all sides) */
+        }
+
+        .middle {
+            height: 30vw;
+            width: 30vw;
+            border-radius: 0px 150px 150px 150px;
+            }
+
+        .right {
+            height: 250px;
+            width: 30vw;
+            border-radius: 40px 10px 40px 10px;
+            /* ^^property to add border radius to images(top/right/bottom/left) */
+       
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="mountain.png" alt="error" height="250px" width="384px" class="left">
+        <img src="coconut_tree.png" alt="error" height="250px" width="384px" class="middle">
+        <img src="night.jpg" alt="error" height="250px" width="384px" class="right">
+    </div>
+</body>
+
+</html>

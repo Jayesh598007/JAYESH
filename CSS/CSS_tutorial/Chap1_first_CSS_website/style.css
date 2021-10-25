@@ -1,0 +1,13 @@
+/* this below file contains the CSS styles for index.html */
+
+.blue1{
+    background-color: salmon;
+}
+.bg-blue{
+    background-color: rgb(17, 46, 141);
+    color: white;
+}
+.blue3{
+    background-color: slategrey;
+    color:yellow;
+

@@ -1,0 +1,129 @@
+<!-- create a website with a black navbar, red div and a black div  -->
+<!-- add a footer with  google font "playball" and "Tillana" to this page -->
+<!-- remove the underline from the links in footer  -->
+<!-- demonstrate 'display:none' and 'visibility:hidden' using a div -->
+<!-- change the header to all upper case  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prcatice of chap 4</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playball&family=Tillana&display=swap" rel="stylesheet">
+    <!-- ^^^google fonts download link used  -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            height: 70px;
+            width: 100%;
+            background-color: rgb(214, 11, 89);
+            font-family: 'Tillana', cursive;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 50px;
+            text-transform: uppercase;
+            /* ^^^'text-transform' to uppercase    */
+        }
+
+        .right {
+            box-sizing: border-box;
+            padding: 20px;
+            background-color: salmon;
+            display: inline-block;
+            width: 50%;
+            height: 90vh;
+            font-style: italic ;        
+            font-size: 20px;
+            /* display: none ; */
+        }
+
+        .left {
+            box-sizing: border-box;
+            padding: 20px;
+            background-color: crimson;
+            display: inline-block;
+            width: 50%;
+            height: 90vh;
+            font-style: italic ; 
+            font-size: 20px;
+            /* visibility: hidden; */
+        }
+
+        footer{
+            background-color: cyan;
+            padding: 12px;
+        }
+
+        .list li a {
+            font-family: 'Tillana';
+            text-decoration: none;
+            /* ^^^removing underline of the links */
+        }
+
+        .list li{
+            background-color: rgb(243, 149, 207);
+            border-style: ridge;
+            border: 2px solid brown;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 3px;
+            display: inline-block;
+        }
+
+        .copyright {
+            color: saddlebrown;
+            font-family: 'Playball', cursive;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        Self Introduction
+    </div><div class="right">
+        <ul>
+            <li>Name</li>
+            <li>Email ID</li>
+            <li>Contact</li>
+            <li>Town</li>
+            <li>Nationality</li>
+            <li>School</li>
+            <li>College</li>
+        </ul>
+    </div><div class="left">
+        <ul>
+            <li>Jayesh Sanjay Chaudhari</li>
+            <li>Jayeshchau598007@gmail.com</li>
+            <li>8380884059</li>
+            <li>Nandurbar</li>
+            <li>Indian</li>
+            <li>Smita Patil Public School</li>
+            <li>D Y Patil College of Engineering</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>
+            <ul class="list">
+                <li><a href="https://google.co.in">Home</a></li><li><a href="#">Contact</a></li><li><a href="#">Gallery</a></li><li><a href="#">Product</a></li>
+            </ul>
+        </p>
+        <p class="copyright">
+            Practice of Chapter 4 <br>
+            &copy; All right reserved
+        </p>
+    </footer>
+</body>
+
+</html>

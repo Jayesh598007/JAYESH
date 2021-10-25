@@ -1,0 +1,103 @@
+<!-- create a layout of your choice using flexbox-->
+<!-- this webpage must contain bg image and flexboxes with images -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-size: cover;
+            background-image: url('bubble.png');
+            height: 100vh;
+            width: 100%;
+        }
+
+        header {
+            position: fixed;
+            z-index: 1;
+            top: 0px;
+            width: 100vw;
+            background-color: brown;
+            color: yellow;
+        }
+
+        .login {
+            float: left;
+            padding: 10px 10px 10px 20px;
+
+        }
+
+        ul {
+            float: right;
+            padding: 10px 20px 10px 10px;
+
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+            padding: 3px;
+            font-size: 2vw;
+        }
+
+        li a {
+            text-decoration: none;
+            color: lightgreen;
+        }
+
+        .box {
+            position: relative;
+            top: 70px;
+            padding: 15px 5px 5px 5px;
+            height: 1500px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left {
+            height: 250px;
+            width: 30vw;
+        }
+
+        .middle {
+            height: 250px;
+            width: 30vw;
+        }
+
+        .right {
+            height: 250px;
+            width: 30vw;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="login"><a href="https://google.com"><img src="login.png" alt="error" height=40px" width="40px"></a></div>
+            <ul>
+                <li>Whatsapp</li>
+                <li>Facebook</li>
+                <li>Instragam</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="box">
+        <div class="left"><img src="mountain.png" alt="error" height="250px" width="384px"></div>
+        <div class="middle"><img src="farm.png" alt="error" height="250px" width="384px"></div>
+        <div class="right"><img src="night.jpg" alt="error" height="250px" width="384px"></div>
+    </div>
+</body>
+
+</html>

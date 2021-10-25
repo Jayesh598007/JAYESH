@@ -59,7 +59,7 @@ function product(a, b, c) {
 // thus we can make multiple functions of various task and can use only after calling it to perform the specific task
 // functions can be used only if it is called, as shown below
 c1 = avg(34, 62);
-c2 = avg(5, 61);
+c2 = sum(5, 61);
 console.log(c1, c2);
 
 // Arrow function 

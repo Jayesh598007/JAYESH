@@ -1,0 +1,70 @@
+<!-- create a website content with a header box, a content, and a footer  -->
+<!-- add border and margin to any one content -->
+<!-- check the margin collapse betn content and footer  -->
+<!-- add the 'box-sizing' property to 'content-box' and check the changes -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 80px;
+            padding: 10px;
+            border: 3px double red;
+            background-color: rgb(41, 182, 146);
+        }
+
+        .content {
+            padding: 10px;
+            height: 50vh;
+            background-color: yellow;
+            margin: 20px;
+            box-sizing: content-box;
+        }
+
+        footer {
+            margin: 20px;
+            background-color: tomato;
+        }
+        .center{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Products</li>
+        </ul>
+    </header>
+
+    <main class="content">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus dolorem itaque expedita provident saepe
+        veritatis perferendis aut voluptatem molestias perspiciatis labore ab, quae error sit quaerat possimus,
+        cupiditate inventore maxime! Voluptatem illo fugiat ea odit delectus fugit cumque commodi quaerat?
+    </main>
+
+    <footer>
+        <p class="center">
+            copyright sportsmania007 &copy;
+        </p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Items</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            padding: 10px;
+            background-color: cornsilk;
+            height: 80vh;
+            display: grid;
+            /* ^^proprty used to enable grid layout  */
+            grid-gap: 10px 10px;
+            /* ^^shorhand property to introduce gap betn two grid (rows, columns) */
+            grid-template-columns: auto auto auto auto auto;
+            /* ^^(auto auto auto auto auto) for five columns  */
+        }
+
+        .One {
+            background-color: turquoise;
+            border: 2px solid teal;
+            border-radius: 10px;
+            padding: 20px;
+            grid-column: 1/3;
+            /* ^^property helps to design a grid item, ie; width of item */
+            grid-row: 1/3;
+            /* ^^property helps to design a grid item-, ie; hight of item */
+        }
+
+        .Two {
+            background-color: lightgreen;
+            border: 2px solid teal;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .Three {
+            background-color: yellow;
+            border: 2px solid teal;
+            border-radius: 10px;
+            padding: 20px;
+            grid-column: 4/6;
+        }
+
+        .Four {
+            background-color: lightseagreen;
+            border: 2px solid teal;
+            border-radius: 10px;
+            padding: 20px;
+            grid-column: 3/6;
+            grid-row: 2/ span 2;
+            /* ^^'span' is used to define the length instead of the edges */
+        }
+
+        .Five {
+            background-color: lightsalmon;
+            border: 2px solid teal;
+            border-radius: 10px;
+            padding: 20px;
+            grid-column: 1/2;
+           
+        }
+
+        .Six {
+            background-color: yellowgreen;
+            border: 2px solid teal;
+            border-radius: 10px;
+            padding: 20px;
+            grid-column: 2/3;
+            grid-row: 3/5;
+        }
+
+        .Seven {
+            background-color: lightskyblue;
+            border: 2px solid teal;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .Eight {
+            background-color: slategrey;
+            border: 2px solid teal;
+            border-radius: 10px;
+            padding: 20px;
+            grid-column: 3/5;
+        }
+
+        .Nine {
+            background-color: hotpink;
+            border: 2px solid teal;
+            border-radius: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="One">One</div>
+        <div class="Two">Two</div>
+        <div class="Three">Three</div>
+        <div class="Four">Four</div>
+        <div class="Five">Five</div>
+        <div class="Six">Six</div>
+        <div class="Seven">Seven</div>
+        <div class="Eight">Eight</div>
+        <div class="Nine">Nine</div>
+    </div>
+</body>
+
+</html>

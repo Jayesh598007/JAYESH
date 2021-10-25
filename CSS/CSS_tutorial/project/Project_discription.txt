@@ -1,0 +1,4 @@
+create a homepage of an e-commerce website
+Ex: Flipkart
+
+Use media reviews to make it responsive

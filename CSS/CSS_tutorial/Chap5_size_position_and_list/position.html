@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+    <!-- 'position property'- used to manipulate the location of an element -->
+
+    <style>
+        body {
+            height: 4444px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        header {
+            position: sticky;
+            /* 'sticky'- element is positioned based on user's scroll positioned */
+            top: 0px;
+            background-color: teal;
+            height: 100px;
+            z-index: 1;
+            /* 'z-index'- Overlapping elements with a larger z-index cover those with a smaller one(no one) */
+        }
+
+        li {
+            display: inline-block;
+            padding: 5px;
+        }
+
+        .box {
+            background-color: coral;
+            height: 50vh;
+            width: 50vw;
+            margin: auto;
+        }
+
+        p {
+            position: static;
+            /* 'static'- it is a default position, here (left/right/top/bottom) dont work  */
+            padding: 10px;
+            text-align: center;
+            border: 2px solid black;
+
+        }
+
+        .b1 {
+            position: relative;
+            /* 'realtive'- element is removed from the flow and is relatively positioned to its parent element, (top/bottom/left/right) parameters for an element will work */
+            top: 100px;
+            left: 70px;
+            height: 200px;
+            width: 200px;
+            background-color: yellowgreen;
+            border: solid brown;
+        }
+
+        .b2 {
+            position: absolute;
+            /* 'absolute'- element is removed from the flow and is relatively positioned to its first non-static ancesteral element or webpage, top/bottom/etc works */
+            right: 0px;
+            height: 200px;
+            width: 200px;
+            background-color: palevioletred;
+            border: solid brown;
+        }
+
+        .b3 {
+            position: fixed;
+            /* 'fixed'- element is removed from the flow and is relatively positioned to the browser window  */
+            top: 130px;
+            left: 30px;
+            height: 200px;
+            width: 200px;
+            background-color: wheat;
+            border: solid brown;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About </li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="box">
+        <p>
+            Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, cupiditate. Eum alias expedita
+            tenetur aliquid consectetur nostrum saepe repellendus, explicabo quae rerum hic sunt suscipit laboriosam
+            labore magnam expedita praesentium. Fugiat, dignissimos. elit. Doloremque, expedition
+        </p>
+        <div class="b1">
+            this is a box 1 and it is positioned with the position property
+        </div>
+        <div class="b2">
+            this is a box 2 and it is positioned with the position property
+        </div>
+        <div class="b3">
+            this is a box 3 and it is positioned with the position property
+        </div>
+    </div>
+</body>
+
+</html>

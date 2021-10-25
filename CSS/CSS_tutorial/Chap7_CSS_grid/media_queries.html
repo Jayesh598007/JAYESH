@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 20px;
+        }
+
+        body {
+            background-image: url("mountain.png");
+            background-size: cover;
+        }
+
+        .box {
+            background-color: tomato;
+            height: 50vh;
+        }
+
+        @media screen and (max-width: 600px) {
+            * {
+                margin: 0;
+                padding: 20px;
+            }
+
+            body {
+                background-color: teal;
+                background-image: none;
+            }
+
+            .box {
+                background-color: turquoise;
+            }
+        }
+
+        /* ^^media queries is used to apply a CSS on a condion basis */
+        /* It is used for responsive websites */
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, saepe assumenda mollitia id suscipit
+            aut recusandae minus ipsa iste, ea, eveniet dolorem itaque ab doloremque alias eaque voluptas hic error?
+        </div>
+    </div>
+</body>
+
+</html>

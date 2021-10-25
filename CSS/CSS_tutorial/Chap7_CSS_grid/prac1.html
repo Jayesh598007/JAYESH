@@ -1,0 +1,47 @@
+<!-- create a header with content using css grid -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prcatice1 </title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            padding: 10px;
+            display: inline-grid;
+            grid-template-columns: auto auto auto;
+        }
+        li{
+            margin: 0px 3px;
+            padding: 5px 2px;
+            list-style: none;
+            font-size: 3vw;
+        }
+        header{
+            background-color: teal;
+            color: turquoise;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li><li>About</li><li>Product</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="box">I am Jayesh</div>
+</body>
+
+</html>

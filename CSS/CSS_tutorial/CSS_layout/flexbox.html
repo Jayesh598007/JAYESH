@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex </title>
+    <!-- flex is used to lay/design things in one dimension (either as a row or as a column) -->
+    <style>
+        .wrapper{
+            display: flex;   
+        }
+        .wrapper > div {
+            flex: 1;
+        }
+        .box1{
+            background-color: tomato;
+            border: 2px solid rgb(165, 61, 61);
+            border-radius: 5px;
+        }
+        .box2{
+            background-color: turquoise;
+            border: 2px solid rgb(165, 61, 61);
+            border-radius: 5px;
+        }
+        .box3{
+            background-color: teal;
+            border: 2px solid rgb(165, 61, 61);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box1">One</div>
+        <div class="box2">Two</div>
+        <div class="box3">Three</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            height: 300px;
+            width: 300px;
+            background-color: crimson;
+            color: cornsilk;
+            font-size: 16px;
+            border: 5px solid darkolivegreen;
+            border-radius: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* ^^properties of the box  */
+        }
+
+        .box:hover {
+            /* #####  Animation properties #####  */
+            animation-name: domain;
+            /* ^^the names of one or more @keyframes */
+            animation-duration: 2s;
+            /* ^^specifies how long the animation should run  */
+            animation-delay: .1s;
+            /* ^^delay of animation to start */
+            animation-iteration-count: 6;
+            /* ^^the number of times the animation will run before stoping  */
+            animation-direction: alternate;
+            /* ^^sets whether an animation should play forward, backward or alternate  */
+            animation-timing-function: cubic-bezier(.19, 1, .22, 1);
+            /* ^^property sets how an animation progresses through the duration  */
+            animation: domain .5s ease-in .1s infinite alternate;
+            /* ^^shorhand property for animations(name/duration/function/delay/iteration/direction) */
+        }
+
+        @keyframes domain {
+            from {
+                width: 300px;
+                height: 300px;
+                font-size: 16px;
+                background-color: crimson;
+                color: cornsilk;
+                border: 5px solid darkolivegreen;
+                border-radius: 60px;
+                /* properties of the box before animaton  */
+            }
+
+            to {
+                width: 500px;
+                height: 500px;
+                font-size: 40px;
+                background-color: lightgoldenrodyellow;
+                color: teal;
+                border: 5px solid darkolivegreen;
+                border-radius: 120px;
+                /* properties of the box after animaton  */
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <p> This is Jayesh Chaudhari </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

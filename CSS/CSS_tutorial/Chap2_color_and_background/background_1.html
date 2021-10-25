@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background_repeat</title>
+    <style>
+        * {
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .brown {
+            background-color: aqua;
+            /* bg color */
+        }
+
+        .red {
+            background-image: url('code.jpg');
+            /* bg image */
+            color: white;
+            height: 150px;
+        }
+
+        body {
+            background-image: url('hello.png');
+            /* body bg image */
+            background-repeat: repeat-x;
+            /* repeat image in x direction */
+            background-repeat: repeat-y;
+            /* repeat image in y direction */
+            background-repeat: no-repeat;
+            /* no-repeat image in either direction */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="brown">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quam reprehenderit natus
+        cupiditate dicta voluptates veniam, saepe neque quasi consequatur, provident, consequuntur explicabo quas sed?
+        Officiis itaque odio voluptate sint!</div>
+
+    <div class="red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequatur molestiae in, omnis illum
+        aperiam pariatur beatae eum rerum sapiente consectetur quaerat delectus fugiat vitae, harum provident hic
+        tempora iure voluptatem porro voluptate esse ipsam quo eligendi. Minima, nam modi.</div>
+
+</body>
+
+</html>

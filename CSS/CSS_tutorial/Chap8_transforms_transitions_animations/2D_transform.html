@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform 2D</title>
+    <!-- 'transform' CSS property lets you rotate, scale, skew, or translate an element. -->
+    <!-- This property allows to apply 2D or 3D transform to the item -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .contain {
+            padding: 20px;
+            height: 80vh;
+            width: 60vw;
+            background-color: magenta;
+        }
+
+        .box1 {
+            margin: 20px;
+            background-color: cadetblue;
+            border: 2px solid teal;
+            transform: translate(120px);
+            /*  (X-axis --default)  */
+            transform: translate(100px, 20px);
+            /* 'translate'- used to move the item in X or Y axis (X-axis/Y-axis) */
+        }
+
+        .box2 {
+            margin: 20px;
+            background-color: hotpink;
+            border: 2px solid teal;
+            transform: rotate(5deg);
+            /* 'rotate'- used to rotate item  */
+        }
+
+        .box3 {
+            margin: 20px;
+            background-color: peachpuff;
+            border: 2px solid teal;
+            transform: scaleX(2);
+            transform: scaleY(2);
+            transform: scale(2, 2);
+            /* 'scale'- used to scale(zoom) an item(X-axis/Y-axis) */
+        }
+
+        .box4 {
+            margin: 20px;
+            background-color: palevioletred;
+            border: 2px solid teal;
+            transform: skew(10deg, 20deg);
+            /* 'skew'- property used to stretch an item (X-axis/Y-axis)  */
+        }
+
+        .box5 {
+            margin: 20px;
+            background-color: aqua;
+            border: 2px solid teal;
+            transform: translateX(120px) rotate(30deg) translateY(100px);
+            /* ^^shorthand property of transform */
+        }
+
+        .box6 {
+            margin: 20px;
+            background-color: coral;
+            border: 2px solid teal;
+            transform: matrix(1, 1.5, -1, 2, 0, 0);
+            /* 'matrix' function is specified with six values -- (a, b, c, d, tx, ty) */
+            /* matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() ) */
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="contain">
+        <div class="box1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae est voluptatem error consectetur
+            cupiditate! Aut, ducimus voluptatum? Nihil
+        </div>
+        <div class="box2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias repudiandae maxime necessitatibus ea sed.
+            Ratione inventore non minima nemo doloremque.
+        </div>
+        <div class="box3">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias repudiandae maxime necessitatibus ea sed.
+            Ratione inventore non minima nemo doloremque.
+        </div>
+        <div class="box4">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias repudiandae maxime necessitatibus ea sed.
+            Ratione inventore non minima nemo doloremque.
+        </div>
+        <div class="box5">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias repudiandae maxime necessitatibus ea sed.
+            Ratione inventore non minima nemo doloremque.
+        </div>
+        <div class="box6">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias repudiandae maxime necessitatibus ea sed.
+            Ratione inventore non minima nemo doloremque.
+        </div>
+    </div>
+</body>
+
+</html>
