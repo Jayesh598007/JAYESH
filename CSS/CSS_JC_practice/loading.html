@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: linear-gradient(135deg, rgb(0, 5, 20), rgb(1, 12, 44), rgb(1, 23, 85),rgb(6, 38, 126) );
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 230px;
+            height: 70px;
+            cursor: pointer;
+        }
+        .dots{
+            margin: 10px;
+            background-color: rgb(245, 86, 94);
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+        }
+        .oneBounce{
+            animation: altOne 1s ease .1s 5;
+        }
+        @keyframes altOne {
+            30%{
+                transform: translateY(-30px);
+            }
+            60%{
+                transform: translateY(0px);
+            }
+        }
+        .twoBounce{
+            animation: altTwo 1s ease .1s 5;
+        }
+        @keyframes altTwo {
+            40%{
+                transform: translateY(-30px);
+            }
+            70%{
+                transform: translateY(0px);
+            }
+        }
+        .threeBounce{
+            animation: altThree 1s ease .1s 5;
+        }
+        @keyframes altThree {
+            50%{
+                transform: translateY(-30px);
+            }
+            80%{
+                transform: translateY(0px);
+            }
+        }
+        .fourBounce{
+            animation: altFour 1s ease .1s 5;
+        }
+        @keyframes altFour {
+            60%{
+                transform: translateY(-30px);
+            }
+            90%{
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main" id="main">
+        <span class="dots" id="one"></span>
+        <span class="dots" id="two"></span>
+        <span class="dots" id="three"></span>
+        <span class="dots" id="four"></span>
+    </div>
+
+
+    <script>
+        document.getElementById('main').addEventListener('click', function(){
+            document.getElementById('one').classList.add('oneBounce');
+            document.getElementById('two').classList.add('twoBounce');
+            document.getElementById('three').classList.add('threeBounce');
+            document.getElementById('four').classList.add('fourBounce');
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>egg</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 90vh;
+        width: 95vw;
+        border-radius: 50px;
+        background-color: rgb(202, 252, 193);
+    }
+    .item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+    }
+    .egg{
+        position: relative;
+        margin: 5px;
+        height: 13rem;
+        width: 10rem;
+        background-color: rgba(255, 253, 251, 0.979);
+        border-radius: 49% 51% 51% 49% / 63% 63% 37% 37%;
+        box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+        15px 25px 10px rgba(0, 0, 0, 0.1), 15px 20px 20px rgba(0, 0, 0, 0.05),
+        inset -10px -10px 15px rgba(177, 165, 165, 0.9);
+    }
+    #one {
+        z-index: 2;
+        top: 50px;
+        left: 50px;
+        transform:rotate(20deg) ;
+    }
+    #two {
+        z-index: 3;
+        top: 90px;
+        transform:rotate(60deg) ;
+    }
+    #three {
+        top: 60px;
+        right: 50px;
+        transform:rotate(-40deg) ;
+    }
+    .plate{
+        height: 15rem;
+        width: 40rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        z-index: 4;
+    }
+    .plate0, .plate1, .plate2{
+        background-image: linear-gradient(to right,  rgb(112, 26, 5), rgb(117, 49, 4), rgb(139, 44, 6),  rgb(168, 49, 13), rgb(221, 95, 49), rgb(99, 6, 6));
+    }
+    .plate0{
+        height: 1rem;
+        width: 29rem;
+        border-radius: 20px;
+    }
+    .plate1 {
+        height: 12rem;
+        width: 27rem;
+        border-radius: 0 0 120px 120px;
+        background-color: rgb(133, 79, 17);
+    }
+    .plate2{
+        height: 1rem;
+        width: 15rem;
+        border-radius: 0 0 20px 20px;
+        position: relative;
+        bottom: 4px;
+        background-image: linear-gradient(to right,  rgb(112, 26, 5), rgb(117, 49, 4),  rgb(99, 6, 6));
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item">
+            <div class="egg" id="one"></div>
+            <div class="egg" id="two"></div>
+            <div class="egg" id="three"></div>
+        </div>
+
+        <div class="plate">
+            <div class="plate0"></div>
+            <div class="plate1"></div>
+            <div class="plate2"></div>
+        </div>
+    </div>
+</body>
+</html>

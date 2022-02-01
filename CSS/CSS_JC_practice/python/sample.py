@@ -1,0 +1,38 @@
+from turtle import *
+
+hideturtle()
+bgcolor('black')
+speed(12)
+color('coral')
+
+circle(100, 90)
+left(90)
+circle(100, 90)
+left(120)
+circle(100, 90)
+left(90)
+circle(100, 90)
+left(120)
+circle(100, 90)
+left(90)
+circle(100, 90)
+left(120)
+circle(100, 90)
+left(90)
+circle(100, 90)
+left(220)
+color('green')
+circle(50, 90)
+color('light green')
+left(50)
+circle(40, 90)
+left(90)
+circle(40, 90)
+left(50)
+fillcolor('light green')
+color('green')
+circle(-50, 90)
+
+exitonclick()
+
+

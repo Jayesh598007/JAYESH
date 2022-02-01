@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: rgb(31, 0, 51);
+        }
+        .box{
+            cursor: pointer;
+            height: 470px;
+            width: 270px;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .one, .two, .three, .four, .five, .six{
+            width: 165px;
+            height: 15px;
+            display: flex;
+            border-radius: 30px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            background-color: rgb(245, 245, 72);
+        }
+        .one{
+            height: 260px;
+            width: 250px;
+            border-radius: 50%;
+            z-index: 2;
+            border:none;
+        }
+        .glow{
+            box-shadow: 0 0 40px 20px rgb(245, 245, 72);
+        }
+        .two{
+            position: relative;
+            width: 120px;
+            height: 00px;
+            border-radius: 0px;
+            bottom: 68px;
+            border-left: 50px solid rgb(31, 0, 51);
+            border-right: 50px solid rgb(31, 0, 51);
+            border-top: 110px solid transparent;
+        }
+        .base{
+            position: relative;
+            padding: 5px 0px;
+            width: 150px;
+            height: 65px;
+            background-color: rgb(53, 49, 49);
+            bottom: 72px;
+            border-radius: 30px;
+        }
+        .three, .four, .five{
+            background-color: rgb(128, 128, 128);
+            position: relative;
+            right: 8px;
+            margin: 5px 0px;
+        }
+        .six{
+            position: relative;
+            width: 100px;
+            height: 20px;
+            border-radius: 0 0 50px 50px ;
+            background-color: rgb(53, 49, 49);
+            bottom: 75px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="box" id="box">
+        <div class="one" id="one"></div>
+        <div class="two"></div>
+        <div class="base">
+            <div class="three"></div>
+            <div class="four"></div>
+            <div class="five"></div>
+        </div>
+        <div class="six"></div>
+    </div>
+
+    <script>  
+
+        // alert msg
+        let msg = document.createElement('div');      
+        msg.innerText = " Click on the BULB ";
+        alert(msg.textContent);
+        
+        document.getElementById('box').addEventListener('click', function(){
+            document.getElementById('one').classList.add('glow');
+        });
+    </script>
+    
+</body>
+</html>

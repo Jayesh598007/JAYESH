@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT';
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .card{
+            width: 150px;
+            height: 150px;
+            background-color: rgb(10, 4, 99);
+            border-radius: 50%;
+            margin: 30px;
+            cursor: pointer;
+        }
+        #btn{
+            padding: 10px;
+            font-weight: bolder;
+        }
+        .cardAnimate1{
+            animation: floatTrans1 3s linear .2s infinite ;
+        }
+        @keyframes floatTrans1 {
+            0%{
+                transform: translateY(0px) translateX(0px);
+            }
+            12.5%{
+                transform: translateY(-50px) translateX(-50px);
+            }
+            25%{
+                transform: translateY(-100px) translateX(-100px);
+            }
+            37.5%{
+                transform: translateY(-50px) translateX(-150px);
+            }
+            50%{
+                transform: translateY(0px) translateX(-200px);
+            }
+            62.5%{
+                transform: translateY(50px) translateX(-150px);
+            }
+            75%{
+                transform: translateY(100px) translateX(-100px);
+            }
+            87.5%{
+                transform: translateY(50px) translateX(-50px);
+            }
+            100%{
+                transform: translateY(0px) translateX(0px);
+            }
+        }
+        .cardAnimate2{
+            animation: floatTrans2 3s linear .2s infinite ;
+        }
+        @keyframes floatTrans2 {
+            0%{
+                transform: translateY(0px) translateX(0px);
+            }
+            12.5%{
+                transform: translateY(-50px) translateX(50px);
+            }
+            25%{
+                transform: translateY(-100px) translateX(100px);
+            }
+            37.5%{
+                transform: translateY(-50px) translateX(150px);
+            }
+            50%{
+                transform: translateY(0px) translateX(200px);
+            }
+            62.5%{
+                transform: translateY(50px) translateX(150px);
+            }
+            75%{
+                transform: translateY(100px) translateX(100px);
+            }
+            87.5%{
+                transform: translateY(50px) translateX(50px);
+            }
+            100%{
+                transform: translateY(0px) translateX(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card" id="mycard1">  </div>
+    <button onclick="myClick()" id="btn"> Click Here </button>
+    <div class="card" id="mycard2">  </div>
+    
+    <script>
+        function myClick(){
+            document.getElementById('mycard1').classList.add('cardAnimate1');
+            document.getElementById('mycard1').style.backgroundColor = "red";
+            document.getElementById('mycard2').classList.add('cardAnimate2');
+            document.getElementById('mycard2').style.backgroundColor = "red";
+        }
+    </script>
+</body>
+</html>
