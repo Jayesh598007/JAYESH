@@ -1,0 +1,21 @@
+from turtle import * 
+
+bgcolor('black')
+speed(11)
+color('yellow')
+
+circle(100)
+left(60)
+circle(100)
+left(60)
+circle(100)
+left(60)
+circle(100)
+left(60)
+circle(100)
+left(60)
+circle(100)
+circle(100, 60)
+color('red')
+left(60)
+circle(100)

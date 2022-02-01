@@ -13,7 +13,7 @@ pac[0].classList.add("text-changed");     // adding new classes to elements usin
 pac[1].classList.add("bg-primary");       // change properties and elements using JS
 console.log(pac[0].innerHTML);            // it returns the data within the element
 console.log(pac[0].innerText);            // it returns the text in the element
-tn = document.getElementsByTagName("div");        // it returns the element nu the tag name ( div, span, h1, button, etc)
+tn = document.getElementsByTagName("div");        // it returns the element with the tag name ( div, span, h1, button, etc)
 console.log(tn);
 
 createdElement = document.createElement("p");       // created a new element

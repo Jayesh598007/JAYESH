@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .tri1{
+            height: 0;
+            width: 0;
+            border-right: 200px solid transparent;
+            border-left: 200px solid transparent;
+            border-bottom: 347px solid lightskyblue;
+        }
+        .tri2{
+            position: relative;
+            height: 0;
+            width: 0;
+            top: -240px;
+            border-right: 200px solid transparent;
+            border-left: 200px solid transparent;
+            border-top: 347px solid lightskyblue;
+        }
+        .tria:hover{
+            animation: animate 1s linear .1s infinite ;
+        }
+        @keyframes animate {
+            0% {
+                transform: rotate(0deg);
+            }
+            33% {
+                transform: rotate(120deg);
+            }
+            66% {
+                transform: rotate(240deg);
+            }
+            100% {
+                transform: rotate(359deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tria">
+        <div class="tri1"></div>
+        <div class="tri2"></div>
+    </div>
+</body>
+</html>

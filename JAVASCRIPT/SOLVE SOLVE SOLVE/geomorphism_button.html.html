@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: linear-gradient(-45deg, rgb(255, 167, 94), rgb(230, 116, 64), rgb(247, 26, 26));
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            height: 500px;
+            width: 500px;
+        }
+        .key{
+            height: 100px;
+            width: 200px;
+            background-image: linear-gradient(to left, #111111, #4b4b4b);
+            border-radius: 70px;
+            box-shadow: inset 25px 0px 25px #171717, inset -25px 0px 25px #494949;
+            color: rgb(255, 251, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            cursor: pointer;
+        }    
+        .plus{
+            padding: 5px;
+            font-weight: bolder;
+            margin: 0px 60px 0 45px;
+        }   
+        .minus{
+            padding: 5px;
+            position: relative;
+            bottom: 5px;
+            margin: 0px 50px 0 10px;
+        }   
+    </style>
+</head>
+<body>
+    <div class="main">
+        <span class="key" id="key1">
+            <span class="plus">+</span>
+            <span class="minus">-</span>
+        </span>
+    </div>
+</body>
+</html>

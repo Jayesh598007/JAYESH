@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Navbar</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif ;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: rgb(236, 243, 224);
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .arrow {
+            padding: 10px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin: 70px;
+        }
+        .arrow:hover{
+            background-color: rgb(204, 200, 200);
+        }
+        #prev{
+            transform: rotate(180deg);
+        }
+        .number{
+            height: 200px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 150px;
+            font-weight: bold;
+            font-family:  'Trebuchet MS';
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="chevron.png"  class="arrow" id="prev" onclick="minus()">
+        <div class="number" id="number"></div>
+        <img src="chevron.png"  class="arrow" id="next" onclick="plus()">
+    </div>
+
+    <script>
+        function minus(){
+            document.getElementById('number').innerHTML= "Prev";         
+        }
+
+        function plus(){
+            document.getElementById('number').innerHTML= "Next";
+        }           
+    </script>
+
+</body>
+</html>
