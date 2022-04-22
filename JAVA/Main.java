@@ -116,13 +116,13 @@ public class Main {
     {
       // Type casting is when you assign a value of one primitive data type to another type.
       /*
+        Widening Casting (automatically) - converting a smaller type to a larger type size
+        byte -> short -> char -> int -> long -> float -> double
 
-          Widening Casting (automatically) - converting a smaller type to a larger type size
-          byte -> short -> char -> int -> long -> float -> double
-
-          Narrowing Casting (manually) - converting a larger type to a smaller size type
-          double -> float -> long -> int -> char -> short -> byte      
+        Narrowing Casting (manually) - converting a larger type to a smaller size type
+        double -> float -> long -> int -> char -> short -> byte      
       */
+
 
       // Widening casting 
       int intNine = 9;
@@ -145,33 +145,26 @@ public class Main {
       /*
         Types of operators:
           Arithmetic operators
+            ( +   -   /   *   %   ++   --  )
+
           Assignment operators
+            ( =   +=   -=   *=   /=  )
+
           Comparison operators
+            ( ==   >   <   <=   >=  !=  )
+
           Logical operators
+            ( ["and"- &&]  ["or"- ||]   ["not" - !]   )
+
           Bitwise operators
       */
-
-
-      // Arithmatic operators:
-      // ( +   -   /   *   %   ++   --  )
-
-
-      // Assignment operators:
-      // ( =   +=   -=   *=   /=  )
-      
-
-      // Comparison operators:
-      // ( ==   >   <   <=   >=  !=  )
-      
-
-      // Logical operators:
-      // ( ["and"- &&]  ["or"- ||]   ["not" - !]   )
     }
 
     {
       // java Strings - used for storing texts
       String name = "Jayesh";
       String greet = "Hello";
+
 
       // concatenation
       System.out.println(greet + " " + name);                        // results 'Hello Jayesh'
@@ -183,6 +176,7 @@ public class Main {
 
       String txt = "find locate in this text.";
       System.out.println(txt.indexOf("locate"));    // results index of a character
+
 
       // Escape character
       // backslash (\) escape character turns special characters into string characters
@@ -225,7 +219,6 @@ public class Main {
       // if statement -- to specify a block of Java code to be executed if a condition is 'true'
       // else if statement -- to specify a new condition if the first condition is 'false'
       // else statement -- to specify a block of code to be executed if the condition is 'false'
-
       /*
         Syntax:
           if (condition1) {
@@ -236,9 +229,7 @@ public class Main {
             // block of code to be executed if the condition1 is false and condition2 is false
           }
       */
-
       int time = 22;
-
       if (time < 10) {
         System.out.println("Good Morning");
       }
@@ -251,12 +242,10 @@ public class Main {
 
 
       // Shorthand if.. else..
-
       /*
         Syntax:
           variable = (condition) ? expressionTrue :  expressionFalse;
       */
-
       int num1 = 20;
       String result = (num1 < 18)? "Good day" : "Good evening";
       System.out.println(result);
@@ -264,7 +253,6 @@ public class Main {
 
       // java Switch 
       // switch statement -- to select one of many code blocks to be executed
-
       /*
         Syntax:
           switch(expression) {
@@ -278,7 +266,6 @@ public class Main {
               // code block
           }
      */
-
       int day = 4;
       switch (day) {
         case 4:
@@ -299,6 +286,7 @@ public class Main {
     {
       // java while loop
 
+
       // while loop -- loops through a block of code as long as a specified condition is 'true'
       /*
         Syntax:
@@ -306,7 +294,6 @@ public class Main {
             // java code to be executed
           } 
       */
-
       int i = 0;
       while(i < 6){
         System.out.println(i);        // results i
@@ -323,7 +310,6 @@ public class Main {
           }
           while(condition)
       */
-
       int j = 0;
       do {
         System.out.println(j);
@@ -334,6 +320,7 @@ public class Main {
 
     {
       // java for loop
+
 
       // for loop -- When you know exactly how many times you want to loop through a block of code
       /*
@@ -350,6 +337,7 @@ public class Main {
       for (int a = 0; a<10; a++){
         System.out.println(a);
       }
+
 
       // for-each loop --  is used exclusively to loop through elements in an array
       /*
@@ -386,7 +374,6 @@ public class Main {
     {
       // java Arrays
       // Arrays are used to store multiple values in a single variable
-
       String[] cars = {"ford", "volvo", "mahindra", "lexus"};
       System.out.println(cars[2]);
 
@@ -398,7 +385,7 @@ public class Main {
       System.out.println(cars.length);      // returns the arrays length
 
 
-    // loop through an array 
+      // loop through an array 
       for(int i = 0; i < cars.length; i++){
         System.out.println(i);         // displays each array element using for loop
       }
@@ -410,7 +397,6 @@ public class Main {
 
       // java multidimensional array -- is an array of arrays.
       // to access the elements of the myNumbers array, specify two indexes
-
       int[][] myNumbers = {{2, 4, 3}, {8, 6, 9, 1}};
       System.out.println(myNumbers[1][2]);      // results the element[2] of array[1] 
     }
