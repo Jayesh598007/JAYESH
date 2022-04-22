@@ -6,6 +6,7 @@ public class Main {
 
   public static void main(String[] args) {
     
+    // Basic Intro
     {
       // println() method to print a line of text to the screen [[ preferrable ]]
       System.out.println("Jayesh Chaudhari is BACK!!!");
@@ -24,8 +25,9 @@ public class Main {
       System.out.println("we can also add a comment after a code");  // like this comment
     }
     
+    // Variables 
     {
-      // Variables are containers for storing data values.
+      // Variables are containers for storing data values
       /* 
       Syntax:
             type variableName = value;
@@ -87,6 +89,7 @@ public class Main {
       System.out.println(myGrade);
     }
 
+    // println()
     {
       //println() is also used for displaying combining variables
       String firstName = "Jayesh ";
@@ -113,6 +116,7 @@ public class Main {
       */
     }
 
+    // TypeCasting 
     {
       // Type casting is when you assign a value of one primitive data type to another type.
       /*
@@ -140,6 +144,7 @@ public class Main {
       System.out.println(intEight);   // results 8
     }
 
+    // Operators 
     {
       // Operators are used to perform operations on variables and values.
       /*
@@ -160,6 +165,7 @@ public class Main {
       */
     }
 
+    // Java Strings
     {
       // java Strings - used for storing texts
       String name = "Jayesh";
@@ -188,6 +194,7 @@ public class Main {
       System.out.println(newLine);      // above text is printed in two diff lines
     }
 
+    // Java Maths
     {
       // java Maths - allows you to perform mathematical tasks
       System.out.println(Math.max(25, 12));     // results max value
@@ -199,6 +206,7 @@ public class Main {
       System.out.println(randomNum);                 // gives random number betn 0 to 100
     }
 
+    // Java booleans
     {
       // java Booleans
       boolean isJavaFun = true;
@@ -213,9 +221,8 @@ public class Main {
       System.out.println(num1 == num2);      // returns false
     }
 
+    // Java If.. Else
     {
-      // java If.. Else
-
       // if statement -- to specify a block of Java code to be executed if a condition is 'true'
       // else if statement -- to specify a new condition if the first condition is 'false'
       // else statement -- to specify a block of code to be executed if the condition is 'false'
@@ -283,10 +290,8 @@ public class Main {
       }
     }
 
+    // Java while loop
     {
-      // java while loop
-
-
       // while loop -- loops through a block of code as long as a specified condition is 'true'
       /*
         Syntax:
@@ -318,10 +323,8 @@ public class Main {
       while(j<4);
     }
 
+    // Java for loop
     {
-      // java for loop
-
-
       // for loop -- When you know exactly how many times you want to loop through a block of code
       /*
         Syntax:
@@ -353,6 +356,7 @@ public class Main {
       }
     }
 
+    // Java break/continue statement
     {
       // java break  -- statement can also be used to jump out of a loop
       for (int j = 0; j<10; j++){
@@ -371,8 +375,8 @@ public class Main {
       }
     }
 
+    // Jsava Arrays
     {
-      // java Arrays
       // Arrays are used to store multiple values in a single variable
       String[] cars = {"ford", "volvo", "mahindra", "lexus"};
       System.out.println(cars[2]);
@@ -401,8 +405,8 @@ public class Main {
       System.out.println(myNumbers[1][2]);      // results the element[2] of array[1] 
     }
 
+    // Java Methods
     {
-      // java Methods
       // method is a block of code which only runs when it is called
       // methods are used to perform certain actions( functions)
 
