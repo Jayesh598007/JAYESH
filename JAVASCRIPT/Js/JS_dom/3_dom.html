@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div id="dom elements">
+        <div class="change CSS">
+            <p id="demo1" onmouseover="colorBlue()" onmouseout="colorBlack()">Hello, <br> Jayesh Chaudhari</p>
+            <script>
+                alert("Hover over the text")
+                function colorBlue(){
+                    document.getElementById('demo1').style.color = "blue";
+                    document.getElementById('demo1').style.fontSize = "larger";
+                    document.getElementById('demo1').style.fontWeight = "bolder";
+                }
+                function colorBlack(){
+                    document.getElementById('demo1').style.color = "black";
+                }
+            </script>
+        </div>
+
+        <div class="change animation">
+            
+        </div>
+    </div>
+</body>
+</html>

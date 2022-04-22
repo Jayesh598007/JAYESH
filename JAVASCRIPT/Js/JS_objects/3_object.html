@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div>
+        <p>Object Constructer function:
+            >> it is a "blueprint" for creating many objects 
+        </p>
+
+        <script>
+            function Person(fname, lname, age, eyecole, car ){
+                this.fname = fname;
+                this.lname = lname;
+                this.age = age;
+                this.eyecolor = eyecole;
+                this.car = car;
+            }
+            const jayesh = new Person("Jayesh", "Chaudhari", 24, "black", "Volvo");
+            const kartik = new Person("Kartik", "Khairnar", 24, "brown", "Honda");
+
+            console.log(JSON.stringify(jayesh))
+            console.log(kartik)
+        </script>
+    </div>
+</body>
+</html>

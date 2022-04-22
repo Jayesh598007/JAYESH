@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div class="dom elements">
+
+        <div class="find">
+            <p id="intro 1">Jayesh Chaudhari</p>
+            <p id="intro 2">Kartik Khairnar</p>
+            <p class="intro">Pratik Patil</p>
+            <p class="intro">Mahesh parihar</p>
+            <p>*********************</p>
+
+            <p id="demo"></p>
+            <button onclick="myClick1()">Elem by id</button>
+            <button onclick="myClick2()">Elem by tag name</button>
+            <button onclick="myClick3()">Elem by class name</button>
+            <button onclick="myClick4()">Elem by query selector</button>
+
+            <script>
+                const elem1 = document.getElementById("intro 1");
+                const elem2 = document.getElementsByTagName('p');
+                const elem3 = document.getElementsByClassName('intro');
+                const elem4 = document.querySelector('p.intro');
+
+                function myClick1(){
+                    document.getElementById('demo').innerHTML = "My name is: " + elem1.innerHTML;
+                }
+                function myClick2(){
+                    document.getElementById('demo').innerHTML = "My name is: " + elem2[1].innerHTML;
+                }
+                function myClick3(){
+                    document.getElementById('demo').innerHTML = "My name is: " + elem3[0].innerHTML;
+                }
+                function myClick4(){
+                    document.getElementById('demo').innerHTML = "My name is: " + elem3[1].innerHTML;
+                }
+            </script>
+        </div>
+
+        <div class="change">
+            <p id="test">Welcome to our website</p>
+            <img src="landscape.jpg" id="myImg" style="height: 200px; width: 250px;">
+            <p id="date"></p>
+
+            <button onclick="change1()"> change content</button>
+            <button onclick="change2()"> change attribute</button>
+            <button onclick="change3()"> change date</button>
+
+            <script>
+                function change1(){
+                    document.getElementById('test').innerHTML = "Thanks for visiting here! ";
+                }
+                function change2(){
+                    document.getElementById('myImg').src = "tree.jpg"
+                }
+                function change3(){
+                    document.getElementById('date').innerHTML = "Date: " + new Date();
+                }
+            </script>
+        </div>
+
+        <div class="form validation">
+            <p>Pls, enter a number betn 1 and 100 : </p>
+            <input placeholder="Contact No." id="numb">
+            <input type="button" value="Submit" onclick="validateForm()"> 
+            <p id="demo2"></p>
+            
+            <script>
+                function validateForm(){
+                    let x = document.getElementById('numb').value;
+                    let text;
+                    if (isNaN(x) || x<1 || x>100) {
+                        text = "Input is not Valid";
+                    }
+                    else{
+                        text = "Input is OK";
+                    }
+                    
+                    document.getElementById('demo2').innerHTML = text;
+                }
+            </script>
+            <p>
+                "Data validation" is the process of ensuring that user input is clean, correct, and useful
+                >>  has the user filled in all required fields?
+                >>  has the user entered a valid date?
+                >>  has the user entered text in a numeric field?
+
+                "Server side validation" is performed by a web server, after input has been sent to the server.
+                "Client side validation" is performed by a web browser, before input is sent to a web server.
+            </p>
+        </div>
+
+    </div>    
+</body>
+</html>

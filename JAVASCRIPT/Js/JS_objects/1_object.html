@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <button id="but1" onclick="document.this.innerHTML = myName()">myName</button>
+    <p id="name1"></p>
+
+    <button id="but2" onclick="document.getElementById('but2').innerHTML = newLoop()">newLoop</button>
+    <p id="name2"></p>
+
+    <button id="but3" onclick="document.this.innerHTML = newArray()">newArray</button>
+    <p id="name3"></p>
+
+    <button id="but4" onclick="document.this.innerHTML = newString()">newString</button>
+    <p id="name4"></p>
+
+
+    <script>
+        const person= {
+            name: "Jayesh",
+            age: 24,
+            Country: "India"
+        };
+
+        // disp object properties
+        function myName(){
+            document.getElementById('name1').innerHTML = person.name + " " + "is a citizen of " +  person.Country;
+        }
+        
+        // disp object in loop
+        function newLoop(){
+            let txt = "";
+            for (let x in person){
+                txt += person[x] + " ";
+            }
+            document.getElementById('name2').innerHTML = txt;
+        }
+
+        //  object converting into an array
+        function newArray(){
+            const myArray = Object.values(person)
+            document.getElementById('name3').innerHTML = myArray;
+        }
+        
+        // object converted to string
+        function newString(){
+            const myStr = JSON.stringify(person); 
+            document.getElementById('name4').innerHTML = myStr ;
+        }
+
+        
+    </script>
+</body>
+</html>

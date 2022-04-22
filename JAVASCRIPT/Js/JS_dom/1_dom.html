@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div class="dom">
+        <p>
+            <!-- Document Object Model  -->
+            With DOM, JS can access and change/create/remove all HTML:
+              >> Elements
+              >> Attributes or properties
+              >> CSS styles
+              >> events
+        </p>
+    </div>
+
+    <div class="dom methods">
+        DOM methods are actions we perform
+        DOM properties are values that we set/change
+
+        <p id="demo"></p>
+        <button id="but" onclick="myClick()"> Click Here</button>
+
+        <script>
+            function myClick(){
+                document.getElementById('demo').innerHTML = "Hello World";
+            }
+            // In the example above,
+            // >> 'getElementById' is a method
+            // >> 'innerHTML' is a property
+        </script>
+    </div>
+
+    <div class="dom document">
+        <div>
+            # Finding Slems
+            >>  document.getElementById(id)	        
+            >>  document.getElementsByTagName(name) 	
+            >>  document.getElementsByClassName(name)
+
+            # Changing Elems
+            >>  element.innerHTML      = new html content	
+            >>  element.attribute      = new value
+            >>  element.style.property = new style
+            >>  element.setAttribute(attribute, value)
+
+            # Adding/Deleting  Elems
+            >>  document.createElement(element)	
+            >>  document.removeChild(element)	
+            >>  document.appendChild(element)	
+            >>  document.replaceChild(new, old)	
+            >>  document.write(text)
+
+            # Event Listener
+            >>  document.getElementById(id).onclick = function(){code}
+        </div>
+    </div>
+</body>
+</html>

@@ -9,4 +9,6 @@ while True:
         print("  Jay Ambe Kirana Stores")
         print("  Your total bill is", sum)
         print(" Thank You  !!!  Visit Again ")
+
+
         

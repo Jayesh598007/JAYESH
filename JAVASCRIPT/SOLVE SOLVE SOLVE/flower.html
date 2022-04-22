@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower</title>
+    <style>
+      *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: salmon;
+        }
+        .box{
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .petal{
+            height: 150px;
+            width: 100px;
+            border-radius: 50px;
+            margin: 5px;
+            border: 2px solid black;
+            /* background-color: rgb(247, 19, 133); */
+        }
+        #one{
+            position: relative;
+            left: 406px;
+            /* transform: rotate(20deg); */
+            background-color: rgb(247, 19, 19);
+        }
+        #two{
+            position: relative;
+            left: 292px;
+            /* transform: rotate(20deg); */
+            background-color: rgb(247, 186, 19);
+        }
+        #three{
+            position: relative;
+            left: 178px;
+            /* transform: rotate(20deg); */
+            background-color: rgb(110, 247, 19);
+        }
+        #four{
+            position: relative;
+            left: 64px;
+            /* transform: rotate(20deg); */
+            background-color: rgb(19, 247, 148);
+        }
+        #five{
+            position: relative;
+            right: 50px;
+            /* transform: rotate(20deg); */
+            background-color: rgb(19, 182, 247);
+        }
+        #six{
+            position: relative;
+            right: 164px;
+            /* transform: rotate(20deg); */
+            background-color: rgb(19, 42, 247);
+        }
+        #seven{
+            position: relative;
+            right: 278px;
+            /* transform: rotate(20deg); */
+            background-color: rgb(213, 19, 247);
+        }
+        #eight{
+            position: relative;
+            right: 392px;
+            /* transform: rotate(20deg); */
+            background-color: rgb(247, 19, 114);
+        } 
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span id="one" class="petal"></span>
+        <span id="two" class="petal"></span>
+        <span id="three" class="petal"></span>
+        <span id="four" class="petal"></span>
+        <span id="five" class="petal"></span>
+        <span id="six" class="petal"></span>
+        <span id="seven" class="petal"></span>
+        <span id="eight" class="petal"></span>
+    </div>
+</body>
+</html>

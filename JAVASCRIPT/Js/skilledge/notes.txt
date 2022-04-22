@@ -1,0 +1,5 @@
+spread method
+rise method
+immutable and mutable arrays
+array slicing
+array cloning

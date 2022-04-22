@@ -69,6 +69,6 @@ function summ(s, t){
 }
 */  // the above function can also be written as below arrow function
 
-summ = (s, t)=>{
+sum = (s, t)=>{
   return (s+t);
 }

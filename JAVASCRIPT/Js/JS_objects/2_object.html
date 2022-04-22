@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <div>
+        Using Getter and Setter:
+        >> Simpler syntax
+        >> equal syntax for both methods and properties
+        >> secure better data quality
+        >> useful to do things behind-the-scenes
+
+        
+        
+        <button id="but" onclick="document.this.innerHTML  = getset()">click Here</button>
+        <p id="name1"></p>
+        <p id="name2"></p>
+        <script>
+            const person  = {
+                fname: "jayesh",
+                lname: "Chaudhari",
+                age: 24,
+                nation:"India",
+                language: "Hindi",
+                department: "",
+                
+                get lang(){             // get the value
+                    return this.language.toUpperCase();
+                },
+                set dept(dept) {        // set the value
+                    this.department = dept;
+                }
+            }
+            person.dept = "Software Development";
+            
+            function getset(){
+                document.getElementById('name1').innerHTML = person.lang;
+                document.getElementById('name2').innerHTML = person.department;
+            }
+        </script>
+    </div>
+</body>
+</html>

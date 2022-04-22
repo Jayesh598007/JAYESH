@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: cornsilk;
+        }
+        .desk{
+            height: 80vh;
+            width: 95vw;
+            border-radius: 40px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            /* background-color: rgb(54, 54, 58); */
+            background-image: linear-gradient(135deg, rgba(11, 15, 49, 0.788), rgba(11, 10, 56, 0.911), rgba(4, 3, 48, 0.966));
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .display{
+            margin-top: 20px;
+            height: 100px;
+            width: 85vw;
+            border-radius: 10px;
+            background-color: rgba(21, 119, 119, 0.692);
+            color: white;
+            text-align: right;
+            padding: 20px;
+            font-size: larger;
+            font-weight: bolder; 
+            font-family:  sans-serif;
+            font-stretch: expanded;
+        }
+        .btns{
+            position: relative;
+            top: 50px;
+            
+        }
+        .symbol{
+            background-color: rgb(156, 22, 49);
+            font-size: 19px;
+            font-weight: bold; 
+            font-family:  sans-serif;
+            height: 70px;
+            width: 70px;
+            color: white;
+            margin: 10px 20px ;
+            border-radius: 9px;
+        }
+        #clear{
+            width: 90px;
+        }
+    </style>
+</head>
+<body>
+
+    <form class="desk" name= "keypad">
+        <input class="display" id="display" name="answer" type="text">
+        <div class="btns">
+            <input class="symbol" type="button" value="J" id="alphaJ" onclick ="keypad.answer.value += '. - - - \n' " >
+            <input class="symbol" type="button" value="A" id="alphaA" onclick ="keypad.answer.value += '. - \n' ">
+            <input class="symbol" type="button" value="Y" id="alphaY" onclick ="keypad.answer.value += '- . - - \n' ">
+            <input class="symbol" type="button" value="E" id="alphaE" onclick ="keypad.answer.value += '. \n' ">
+            <input class="symbol" type="button" value="S" id="alphaS" onclick ="keypad.answer.value += '. . . \n' ">
+            <input class="symbol" type="button" value="H" id="alphaH" onclick ="keypad.answer.value += '. . . . \n' ">
+            <input class="symbol" type="button" value="CLEAR" id="clear" onclick ="keypad.answer.value = ' ' ">
+        </div>
+    </form>
+
+</body>
+</html>
