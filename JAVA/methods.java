@@ -1,8 +1,9 @@
 public class methods {
 
     // Java Methods    
+    // java 'method' is similar to python 'functions'
     // method is a block of code which only runs when it is called
-    // methods are used to perform certain actions( functions)
+    // methods are used to perform certain actions
     // System.out.println()  -- is an example of java in-built method
 
     /*
